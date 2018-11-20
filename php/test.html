@@ -1,0 +1,89 @@
+<!DOCTYPE html>  
+<head>  
+    <title>Take Photo：Utilities for ICBC</title>
+	 <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=MYAca1431R5bDDw1fRqNmzXorZ40YrFf"></script>
+</head>  
+<body>  
+
+
+    
+	<video height="120px" autoplay="autoplay"></video>
+    <canvas id="canvas1" height="120px" ></canvas><hr />  
+
+
+
+  <input type="button" title="拍照" value="拍照" onclick="getPhoto();" />
+    <script type="text/javascript">  
+        var video = document.querySelector('video');  
+        var audio, audioType;  
+  
+        var canvas1 = document.getElementById('canvas1');  
+        var context1 = canvas1.getContext('2d');  
+  
+        navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia;  
+        window.URL = window.URL || window.webkitURL || window.mozURL || window.msURL;  
+  
+        var exArray = []; //存储设备源ID  
+        
+		getMedia();
+        function getMedia() {  
+            if (navigator.getUserMedia) {  
+                navigator.getUserMedia({  
+                    'video': {  
+                        'optional': [{  
+                            'sourceId': exArray[1] //0为前置摄像头，1为后置  
+                        }]  
+                    },  
+                    'audio':true  
+                }, successFunc, errorFunc);    //success是获取成功的回调函数  
+            }  
+            else {  
+                alert('Native device media streaming (getUserMedia) not supported in this browser.');  
+            }  
+        }  
+  
+        function successFunc(stream) {  
+            //alert('Succeed to get media!');  
+            if (video.mozSrcObject !== undefined) {  
+                //Firefox中，video.mozSrcObject最初为null，而不是未定义的，我们可以靠这个来检测Firefox的支持  
+                video.mozSrcObject = stream;  
+            }  
+            else {  
+                video.src = window.URL && window.URL.createObjectURL(stream) || stream;  
+            }  
+  
+            //video.play();  
+  
+            // 音频  
+
+            
+        }  
+        function errorFunc(e) {  
+            alert('Error！'+e);  
+        }  
+  
+          
+
+  
+        //获取音频格式  
+
+  
+        // vedio播放时触发，绘制vedio帧图像到canvas  
+//        video.addEventListener('play', function () {  
+//            drawVideoAtCanvas(video, context2);  
+//        }, false);  
+  
+        //拍照  
+        function getPhoto() {  
+            context1.drawImage(video, 0, 0,160,120); //将video对象内指定的区域捕捉绘制到画布上指定的区域，实现拍照。  
+			video.style.setProperty("display","none")
+        }  
+  
+        //视频  
+
+    </script>  
+</body>  

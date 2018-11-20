@@ -4664,8 +4664,8 @@ input, select, textarea {
 	position:absolute;
 	height:674px;
 	/*width:100%;*/
-	left:0px;
-	top:0px;
+	left:500px;
+	top:500px;
 	opacity:1;
 	display:none;
 	background-color:white;
@@ -4676,8 +4676,8 @@ input, select, textarea {
 	position:absolute;
 	right:0;
 	left:0;
-	bottom:0;
-	top:0;
+	bottom:500px;
+	top:500px;
 	margin:0 auto;
 	display:none;
 	z-index:1;
@@ -4695,12 +4695,11 @@ input, select, textarea {
 
 .hide-center #close {
 	width:20px;
-	height:20px;
+	height:40px;
 	border:0;
-	border-radius:80%;
-	background-color:red;
+	background-color:ghostwhite;
 	color:white;
-	margin: 0 auto;
+	padding: 0;
 
 	/*display:inline-block;*/
 }
@@ -4716,7 +4715,7 @@ input, select, textarea {
 	padding:13px;
 	width:25px;
 	height:28px;
-	background-color:white;
+	background-color:ghostwhite;
 	vertical-align:middle;
 }
 .hide-center .loginInput {
@@ -4724,8 +4723,8 @@ input, select, textarea {
 	width:230px;
 	padding-left:10px;
 	border:0;
-	background-color:white;
-	color:white;
+	background-color:ghostwhite;
+	color:gray;
 }
 .hide-center .loginUserName {
 	padding-left:30px;
@@ -4742,7 +4741,7 @@ input, select, textarea {
 }
 .hide-center .login1 #input-bottomright-loginInput {
 	border-bottom-right-radius:5px;
-	color:white;
+	color:gray;
 }
 .hide-center .loginPassword {
 	padding-left:30px;
@@ -4752,9 +4751,10 @@ input, select, textarea {
 	margin-left:30px;
 }
 .hide-center #BSignIn {
+	margin:0 auto;
 	border:0;
-	background:#329d90;
-	color:#ffffff;
+	background:white;
+	color:white;
 	width:100px;
 	height:40px;
 	border-bottom-left-radius:5px;
@@ -4764,9 +4764,106 @@ input, select, textarea {
 }
 #loginPart {
 	margin:0 auto;
-
-
 }
 
+/*.hide {*/
+	/*display: none !important;*/
+/*}*/
+
+/*充值*/
+.RoverCurtain {
+	border-top:1px solid rgb(230,245,255);
+	position:absolute;
+	height:674px;
+	/*width:100%;*/
+	left:0px;
+	top:0px;
+	opacity:1;
+	display:none;
+	background-color:white;
+}
+.Rhide-center {
+	width:308px;
+	/*height:300px;*/
+	height:600px;
+	position:absolute;
+	right:0;
+	left:0;
+	bottom:0;
+	top:0;
+	margin:0 auto;
+	display:none;
+	z-index:1;
+}
+.Rhide-center #Rformhead {
+	width:300px;
+	height:42px;
+	margin:0;
+	padding-top:12px;
+	padding-bottom:-30px;
+	border-top-left-radius:10px;
+	border-top-right-radius:10px;
+	background-color:white;
+}
+
+.Rhide-center #Rclose {
+	width:20px;
+	height:40px;
+	border:0;
+	background-color:ghostwhite;
+	color:white;
+	padding: 0;
+
+	/*display:inline-block;*/
+}
+.Rhide-center #Rformbody {
+	width:300px;
+	height:445px;
+	background-color:white;
+	border-bottom-left-radius:10px;
+	border-bottom-right-radius:10px;
+}
+.Rhide-center .RloginHead {
+	margin-right:-8px;
+	padding:13px;
+	width:25px;
+	height:28px;
+	background-color:ghostwhite;
+	vertical-align:middle;
+}
+.Rhide-center .RloginInput {
+	height:52px;
+	width:230px;
+	padding-left:10px;
+	border:0;
+	background-color:ghostwhite;
+	color:gray;
+}
+.Rhide-center .RloginUserName {
+	padding-left:30px;
+	padding-top:30px;
+}
+
+.Rhide-center .loginPassword {
+	padding-left:30px;
+}
+.Rhide-center #formfoot {
+	margin-top:30px;
+	margin-left:30px;
+}
+
+#rechargePart {
+	margin:0 auto;
+}
+
+
+.alertWord {
+	color:red;
+	display:none;
+}
+
+.hide{
+	display: none;
+}
 
 

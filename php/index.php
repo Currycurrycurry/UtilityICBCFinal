@@ -8,6 +8,7 @@
 		<noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
 		<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=MYAca1431R5bDDw1fRqNmzXorZ40YrFf"></script>
 	</head>
+
 	<body class="is-preload">
 
 		<!-- Wrapper -->
@@ -16,7 +17,7 @@
 				<!-- Intro -->
 					<div id="intro">
 						<h1>Utilities<br />
-						生活助手</h1>
+						智能生活助手</h1>
 						<p>基于工行平台的<br />
 							一站式生活便民服务网站</p>
 						<ul class="actions">
@@ -33,8 +34,8 @@
 					<nav id="nav">
 						<ul class="links">
 							<li class="active"><a href="index.php">Goods跑腿代购</a></li>
-							<li><a href="parking.html">Payments生活缴费</a></li>
-							<li><a href="payment.html">Come Parking自助停车</a></li>
+							<li><a href="parking.php">Come Parking自助停车</a></li>
+							<li><a href="payment.php">Payments生活缴费</a></li>
 						</ul>
 
                         <?php include "createNav.php" ?>
@@ -42,12 +43,14 @@
                 <!--登陆-->
                 <div id="loginPart">
                     <div class="overCurtain"></div>
-                    <div class="hide-center">
+                    <div class="hide-center" style="border-style: solid;border-width: thick;">
                         <div id="formhead">
-                            <button type="button" id="close">X</button>
-
+<!--                            <button type="button" id="close">X</button>-->
+                            <a href="#" id="close" class="icon alt fa-close" style="color:black;size: 10px;"><span class="label">微信Wechat</span></a>
+                            <h3 id="signIn" style="margin: 0 auto;display: inline;">登陆Log In</h3>
+                            <br><hr>
                         </div>
-                        <div id="formbody">
+                        <form id="formbody" method = "post" action = 'login.php'>
                             <div class="loginUserName">
                                 <input id="input-topright-loginInput" name="userName" class="loginInput" placeholder="userName" type="text" value="admin">
                             </div>
@@ -55,11 +58,36 @@
                                 <input id="input-bottomright-loginInput" name="password" class="loginInput" placeholder="password" type="password" style="border-bottom-right-radius:5px;">
                             </div>
                             <div id="formfoot">
-                                <button id="BSignIn" type="submit">Sign In</button>
+                                <a href="login.php" type="submit" style="padding-left:8px;padding-right:8px; padding-top: 2px;padding-bottom: 2px;" class="button large">Sign In </a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+
+
+
+<!--                充值弹窗-->
+<!--                width:100%;height:600px;-->
+                <div id="rechargePart" style="">
+                    <div class="RoverCurtain"></div>
+                    <div class="Rhide-center" style="border: solid;border-width: thick;">
+                        <form id="Rformhead" method="post" action = 'PayForParking.php'>
+                            <button type="button" id="Rclose">X</button>
+                            <p id="reCharge" style="margin: 0 auto;display: inline;">充值Recharge</p><br/>
+
+                            请输入充值金额：<input type = "text"height="30px" width="120px" name = "amount" value = '100'/>
+                            <br><hr>
+                        </form>
+                        <div id="Rformbody">
+<!--                           <img src="../images/bread.png">-->
+                            <video height="120px" autoplay="autoplay"></video><br/>
+                            <canvas id="canvas1" height="120px" ></canvas><hr />
+                            <input type="button" title="拍照" value="支付" onclick="getPhoto();alert('支付成功！');" />
                             </div>
                         </div>
                     </div>
-                </div>
+
 
 
 
@@ -78,7 +106,7 @@
 									</p>
 								</header>
 
-								<!-- Map:bug -->
+								<!-- ！！！！Map -->
 								<div id="mapG" style="z-index:999;height:500px;weight:500px">
 
 								</div>
@@ -100,13 +128,13 @@
 									<p>  全家（国定路店）位于五角场街道国定东路285号，是一家主要负责食品、日用品的销售的多功能便利店。
                                     </p>
 									<ul class="actions special">
-										<li><a href="#" class="button">超市便利</a></li>
+										<li><a href="details.php" class="button">超市便利</a></li>
 									</ul>
 								</article>
 								<article>
 									<header>
 										<span class="date">入驻商家</span>
-										<h2><a href="#">许鲜水果店<</a></h2>
+										<h2><a href="#">许鲜水果店</a></h2>
 									</header>
 									<a href="#" class="image fit"><img src="../images/vegetable.png" width="1200px" height="300px" alt="" /></a>
 									<p>许鲜水果店（五角场店）位于国痒路85号，坚持服务至上的理念，每日给顾客带来最新鲜的水果。
@@ -167,7 +195,7 @@
 								</article>
 							</section>
 
-						<!-- Footer -->
+						<!-- Footer pagination-->
 							<footer>
 								<div class="pagination">
 									<!--<a href="#" class="previous">Prev</a>-->
@@ -186,24 +214,36 @@
 
 				<!-- Footer For register-->
 					<footer id="footer" >
-
+							
 						<section>
+						<form method="post" action="register.php">
                             <a name="register"><h2>Register注册</h2></a>
-							<form method="post" action="#">
+							
 								<div class="fields">
 									<div class="field">
-										<label for="name">姓名Name</label>
-										<input type="text" name="name" id="name" />
+										<label for="name">用户名Name</label>
+										<input type="text" placeholder="示例：王小明123" style="width: 250px" name="name" id="name" onblur="EmptyUsernameHint();WrongUsernameFormHint();" />
+                                        <p class="alertWord hide" style="color: red;" id="promptEN">用户名不能为空！</p>
+                                        <p class="alertWord hide" style="color: red;" id="promptWrongUser">用户名格式错误！</p>
 									</div>
 									<div class="field">
 										<label for="cardNumber">卡号Card Number</label>
-										<input type="number" name="cardNumber" id="cardNumber" />
-                                        <p>没有工行卡？<a href="index.php">点此申请</a></p>
+										<input type="number" style="width: 250px" name="cardNumber" placeholder="xxxx-xxxx-xxxx-xxxx" id="cardNumber" onblur="EmptyCardNumber();WrongCardNumberHint();" />
+                                        <p>没有工行卡？<a href="https://epass.icbc.com.cn/regist/regist_index.jsp">点此申请</a></p>
+                                        <p class="alertWord hide" style="color: red;" id="promptEC">卡号不能为空！</p>
+                                        <p class="alertWord hide" style="color: red;" id="promptWrongCard">卡号格式错误！</p>
 									</div>
 
                                     <div class="field">
-                                        <label for="userID">身份证ID number</label>
-                                        <input type="number" name="userID" id="userID" />
+                                        <label for="password">密码Password</label>
+                                        <input type="password" style="width: 250px" name="password" id="password" onblur="EmptyPasswordHint();WrongPasswordFormHint();" /><br>
+                                        <p class="alertWord hide"  style="color: red;" id="promptEP">密码不能为空！</p>
+                                        <p class="alertWord hide"  style="color: red;" id="promptErrorP">密码格式错误！</p>
+
+                                        <label for="Cpassword">确认密码Password</label>
+                                        <input type="password" style="width: 250px" name="Cpassword" id="Cpassword" onblur="DifferentPasswordHint();EmptyCPasswordHint();" />
+                                        <p class="alertWord hide" style="color: red;" id="promptDP">密码不相同！</p>
+                                        <p class="alertWord hide" style="color: red;" id="promptEmptyPassWord">请确认密码！</p>
                                         <hr>
                                     </div>
 
@@ -211,21 +251,29 @@
 
 								</div>
 								<ul class="actions">
-									<li><input type="submit" value="REGISTER" /></li>
+									<li><input type="submit" value="REGISTER" id="register_submit" /></li>
 								</ul>
-                            </form>
+                            
 
 						</section>
 						<section class="split contact">
 							<section class="alt">
                                 <label for="address">家庭住址Address</label>
-                                <input type="text" name="address" id="address" />
+                                <input type="text" name="address"  style="width: 250px" id="address" />
 							</section>
 							<section>
                                 <label for="phone">手机号码Phone</label>
-                                <input type="number" name="phone" id="phone" />
-                                <p style="margin:1em;"><a href="index.php">点此获取验证码</a></p>
+                                <input type="number" style="width: 250px" name="phone" id="phone" onblur="EmptyPhoneHint();WrongPhoneHint();" />
+                                <p class="alertWord hide" style="color: red;" id="promptEPhone" >号码不能为空！</p>
+                                <p class="alertWord hide" style="color: red;" id="wrong_phone_form_hint" >号码格式错误！</p>
+
 							</section>
+                            <section>
+                                <label for="verifyCode">验证码Verify</label>
+                                <input type="number" maxlength="4" style="width: 200px" name="verifyCode" id="verifyCode" />
+                                <p style="margin:1em;"><a href="msgVerify.php">点此获取验证码</a></p>
+<!--                                <p class="alertWord" style="color: red;" id="promptDP">密码不相同！</p>-->
+                            </section>
 
 							<section>
                                 <h3>其它方式注册<br>
@@ -241,36 +289,27 @@
 
                             <section class="col-4 col-12-small">
                                 <h3>注册类型：</h3>
-                                <input type="radio" id="demo-priority-low" name="demo-priority" checked>
+                                <input type="radio" id="demo-priority-low" name="demo-priority" value = "1"checked>
                                 <label for="demo-priority-low">用户 For user</label>
-                                <input type="radio" id="demo-priority-normal" name="demo-priority">
+                                <input type="radio" id="demo-priority-normal" name="demo-priority" value = "0">
                                 <label for="demo-priority-normal">商户 For business</label>
                             </section>
 						</section>
+						</form>
 					</footer>
 
                 <!-- Copyright -->
 					<div id="copyright">
-						<ul><li>&copy; Utility for ICBC</li><li>Design: <a href="https://html5up.net">FDU team</a></li></ul>
+						<ul><li>&copy; Utility for ICBC</li><li>Design: <a href="#">FDU team</a></li></ul>
 					</div>
+            </div>
 
-			</div>
+        <script>
+
+        </script>
 
 
-		<!-- Scripts -->
-		<script type="text/javascript">
-            // 百度地图API功能
-            var map = new BMap.Map("mapG");    // 创建Map实例
-            map.centerAndZoom(new BMap.Point(121.404, 31.915), 13);  // 初始化地图,设置中心点坐标和地图级别
-            //添加地图类型控件
-            map.addControl(new BMap.MapTypeControl({
-                mapTypes:[
-                    BMAP_NORMAL_MAP,
-                    BMAP_HYBRID_MAP
-                ]}));
-            map.setCurrentCity("上海");          // 设置地图显示的城市 此项是必须设置的
-            map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
-		</script>
+
 			<script src="../assets/js/jquery.min.js"></script>
 			<script src="../assets/js/jquery.scrollex.min.js"></script>
 			<script src="../assets/js/jquery.scrolly.min.js"></script>
@@ -279,9 +318,61 @@
 			<script src="../assets/js/util.js"></script>
 			<script src="../assets/js/main.js"></script>
             <script src="../assets/js/loginPop.js"></script>
+            <script src="../assets/js/map.js"></script>
+            <script src="../assets/js/prompt.js"></script>
 
-		    <!--<script src="../assets/js/map.js"></script>-->
+        <script type="text/javascript">
+            var video = document.querySelector('video');
+
+            var canvas1 = document.getElementById('canvas1');
+            var context1 = canvas1.getContext('2d');
+
+            navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia;
+            window.URL = window.URL || window.webkitURL || window.mozURL || window.msURL;
+
+            var exArray = [];
+
+            getMedia();
+            function getMedia() {
+                if (navigator.getUserMedia) {
+                    navigator.getUserMedia({
+                        'video': {
+                            'optional': [{
+                                'sourceId': exArray[1]
+                            }]
+                        },
+                        'audio':true
+                    }, successFunc, errorFunc);
+                }
+                else {
+                    alert('Native device media streaming (getUserMedia) not supported in this browser.');
+                }
+            }
+
+            function successFunc(stream) {
+                //alert('Succeed to get media!');
+                if (video.mozSrcObject !== undefined) {
+                    //Firefox中，video.mozSrcObject最初为null，而不是未定义的，我们可以靠这个来检测Firefox的支持
+                    video.mozSrcObject = stream;
+                }
+                else {
+                    video.src = window.URL && window.URL.createObjectURL(stream) || stream;
 
 
-	</body>
+                }
+            }
+            function errorFunc(e) {
+                alert('Error！'+e);
+            }
+
+
+            function getPhoto() {
+                context1.drawImage(video, 0, 0,160,120); //将video对象内指定的区域捕捉绘制到画布上指定的区域，实现拍照。
+                video.style.setProperty("display","none");
+            }
+
+            //视频
+
+        </script>
+    </body>
 </html>
