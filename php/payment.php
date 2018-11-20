@@ -26,8 +26,57 @@
 						</ul>
 						<?php include "createNav.php" ?>
 					</nav>
+                <!--登陆-->
+                <div id="loginPart">
+                    <div class="overCurtain"></div>
+                    <div class="hide-center" style="border-style: solid;border-width: thick;">
+                        <div id="formhead">
+                            <!--                            <button type="button" id="close">X</button>-->
+                            <a href="#" id="close" class="icon alt fa-close" style="color:black;size: 10px;"><span class="label">微信Wechat</span></a>
+                            <h3 id="signIn" style="margin: 0 auto;display: inline;">登陆Log In</h3>
+                            <br><hr>
+                        </div>
+                        <form id="formbody" method = "post" action = 'login.php'>
+                            <div class="loginUserName">
+                                <input id="input-topright-loginInput" name="userName" class="loginInput" placeholder="userName" type="text" value="admin">
+                            </div>
+                            <div class="loginPassword">
+                                <input id="input-bottomright-loginInput" name="password" class="loginInput" placeholder="password" type="password" style="border-bottom-right-radius:5px;">
+                            </div>
+                            <div id="formfoot">
+                                <a href="login.php" type="submit" style="padding-left:8px;padding-right:8px; padding-top: 2px;padding-bottom: 2px;" class="button large">Sign In </a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
 
-				<!-- Main -->
+
+
+
+                <!--                充值弹窗-->
+                <!--                width:100%;height:600px;-->
+                <div id="rechargePart" style="">
+                    <div class="RoverCurtain"></div>
+                    <div class="Rhide-center" style="border: solid;border-width: thick;">
+                        <form id="Rformhead" method="post" action = 'PayForParking.php'>
+                            <button type="button" id="Rclose">X</button>
+                            <p id="reCharge" style="margin: 0 auto;display: inline;">充值Recharge</p><br/>
+
+                            请输入充值金额：<input type = "text"height="30px" width="120px" name = "amount" value = '100'/>
+                            <br><hr>
+                        </form>
+                        <div id="Rformbody">
+                            <!--                           <img src="../images/bread.png">-->
+                            <video height="120px" autoplay="autoplay"></video><br/>
+                            <canvas id="canvas1" height="120px" ></canvas><hr />
+                            <input type="button" title="拍照" value="支付" onclick="getPhoto();alert('支付成功！');" />
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <!-- Main -->
 					<div id="main">
 
 						<!-- Post -->
@@ -45,7 +94,7 @@
 								</p>
 
                                 <ul class="actions special">
-                                    <li><a href="#" class="button large">开通自助缴费服务</a></li>
+                                    <li><a href="payment.php#register" class="button large">开通自助缴费服务</a></li>
                                 </ul>
 
 
@@ -73,6 +122,7 @@
                                     <section>
                                         <form method="post" action="#">
                                             <div class="fields">
+                                                <a name="register"><h2>Register开通服务</h2></a>
                                                 <div class="field">
                                                     <label for="name">姓名Name</label>
                                                     <input type="text" name="name" id="name" placeholder="王晓宁" />
@@ -123,6 +173,7 @@
 			<script src="../assets/js/breakpoints.min.js"></script>
 			<script src="../assets/js/util.js"></script>
 			<script src="../assets/js/main.js"></script>
+                <script src="../assets/js/loginPop.js"></script>
 
 	</body>
 </html>

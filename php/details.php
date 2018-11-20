@@ -32,43 +32,83 @@
     <!-- Main -->
     <div id="main">
 
-        <!-- Post -->
-        <section class="post">
-            <header class="major">
-                <h1>Family<br />
-                    全家</h1>
-            </header>
-
-            <!-- Text stuff -->
-
-            <span class="image fit"><img src="../images/familybg.jpg" alt="" /></span>
-            <p>
-                Payments加入群支付功能，与生物识别技术一起，让您在便捷支付的同时体验生活的温暖!现在开启自助生活缴费，与工行卡绑定，更享8.8折优惠！
-            </p>
-
-            <ul class="actions special">
-                <li><a href="#" class="button large">开通自助缴费服务</a></li>
-            </ul>
-
-
-            <h3>水电煤缴费</h3>
-            <ul class="actions">
-                <li><a href="#" class="button primary">水费</a></li>
-                <li><a href="#" class="button">电费</a></li>
-                <li><a href="#" class="button primary">煤气费</a></li>
-            </ul>
-
-            <div class="row">
-                <div class="col-6 col-12-small">
-                    <ul class="actions stacked">
-                        <li><a href="#" class="button primary fit">开通群支付功能</a></li>
-                        <li><a href="#" class="button fit">了解生物识别技术</a></li>
-                    </ul>
+        <!--登陆-->
+        <div id="loginPart">
+            <div class="overCurtain"></div>
+            <div class="hide-center" style="border-style: solid;border-width: thick;">
+                <div id="formhead">
+                    <!--                            <button type="button" id="close">X</button>-->
+                    <a href="#" id="close" class="icon alt fa-close" style="color:black;size: 10px;"><span class="label">微信Wechat</span></a>
+                    <h3 id="signIn" style="margin: 0 auto;display: inline;">登陆Log In</h3>
+                    <br><hr>
                 </div>
-
+                <form id="formbody" method = "post" action = 'login.php'>
+                    <div class="loginUserName">
+                        <input id="input-topright-loginInput" name="userName" class="loginInput" placeholder="userName" type="text" value="admin">
+                    </div>
+                    <div class="loginPassword">
+                        <input id="input-bottomright-loginInput" name="password" class="loginInput" placeholder="password" type="password" style="border-bottom-right-radius:5px;">
+                    </div>
+                    <div id="formfoot">
+                        <a href="login.php" type="submit" style="padding-left:8px;padding-right:8px; padding-top: 2px;padding-bottom: 2px;" class="button large">Sign In </a>
+                    </div>
+                </form>
             </div>
+        </div>
 
-            <hr />
+
+
+
+        <!--                充值弹窗-->
+        <!--                width:100%;height:600px;-->
+        <div id="rechargePart" style="">
+            <div class="RoverCurtain"></div>
+            <div class="Rhide-center" style="border: solid;border-width: thick;">
+                <form id="Rformhead" method="post" action = 'PayForParking.php'>
+                    <button type="button" id="Rclose">X</button>
+                    <p id="reCharge" style="margin: 0 auto;display: inline;">充值Recharge</p><br/>
+
+                    请输入充值金额：<input type = "text"height="30px" width="120px" name = "amount" value = '100'/>
+                    <br><hr>
+                </form>
+                <div id="Rformbody">
+                    <!--                           <img src="../images/bread.png">-->
+                    <video height="120px" autoplay="autoplay"></video><br/>
+                    <canvas id="canvas1" height="120px" ></canvas><hr />
+                    <input type="button" title="拍照" value="支付" onclick="getPhoto();alert('支付成功！');" />
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Image -->
+        <header class="major">
+            <h1>Family<br />
+                全家</h1>
+        </header>
+        <span class="image fit"><img src="../images/familybg.jpg" alt="" /></span>
+        <div class="box alt">
+            <div class="row gtr-50 gtr-uniform">
+                <div class="col-4"><span class="image fit"><img style="width:250px;height:200px;" src="../images/pic02.jpg" alt="" /><label>￥<a href="#" class="icon fa-plus"></a></label><a href="#" class="button small">第二份1.8折</a></span></div>
+                <div class="col-4"><span class="image fit"><img style="width:250px;height:200px;" src="../images/pic03.jpg" alt="" /></span></div>
+                <div class="col-4"><span class="image fit"><img style="width:250px;height:200px;" src="../images/pic04.jpg" alt="" /></span></div>
+                <!-- Break -->
+                <div class="col-4"><span class="image fit"><img style="width:250px;height:200px;" src="../images/pic04.jpg" alt="" /></span></div>
+                <div class="col-4"><span class="image fit"><img style="width:250px;height:200px;" src="../images/pic02.jpg" alt="" /></span></div>
+                <div class="col-4"><span class="image fit"><img style="width:250px;height:200px;" src="../images/pic03.jpg" alt="" /></span></div>
+                <!-- Break -->
+                <div class="col-4"><span class="image fit"><img style="width:250px;height:200px;" src="../images/pic03.jpg" alt="" /></span></div>
+                <div class="col-4"><span class="image fit"><img style="width:250px;height:200px;" src="../images/pic04.jpg" alt="" /></span></div>
+                <div class="col-4"><span class="image fit"><img style="width:250px;height:200px;" src="../images/pic02.jpg" alt="" /></span></div>
+            </div>
+        </div>
+
+        <h3>Left &amp; Right</h3>
+        <p><span class="image left"><img src="../images/pic08.jpg" alt="" /></span>Lorem ipsum dolor sit accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Vestibulum ante ipsum primis in faucibus magna blandit adipiscing eu felis iaculis.</p>
+        <p><span class="image right"><img src="../images/pic09.jpg" alt="" /></span>Lorem ipsum dolor sit accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Vestibulum ante ipsum primis in faucibus magna blandit adipiscing eu felis iaculis.</p>
+
+        <hr />
+
 
             <!-- Footer Regsster -->
             <footer id="footer">
@@ -125,6 +165,6 @@
     <script src="../assets/js/breakpoints.min.js"></script>
     <script src="../assets/js/util.js"></script>
     <script src="../assets/js/main.js"></script>
-
+    <script src="../assets/js/loginPop.js"></script>
 </body>
 </html>
