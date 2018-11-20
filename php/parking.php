@@ -34,7 +34,9 @@
 						<!-- Post -->
 							<section class="post">
 								<header class="major">
-									<span class="date">April 25, 2017</span>
+									<span class="date"><?php
+                                        echo " " . date("Y/m/d") . "<br>";
+                                        ?></span>
 									<h1>Come Parking<br />
 										自助停车</h1>
 									<p>Come Parking提供在线选车位，在线引导泊车，在线支付费用服务，让您的爱车不再无处安放!</p>
@@ -45,8 +47,8 @@
                                 <br>
                                 <!--<a href="#" class="image main"><img src="../images/bg.jpg" alt="" /></a>-->
                                 <ul class="actions special">
-                                    <li><a href="#" class="button large">周边停车场一键搜寻</a></li>
-                                    <li><a href="#" class="button large">新用户立减20元</a></li>
+                                    <li><a class="button large" onclick="searchParking();">周边停车场一键搜寻</a></li>
+                                    <li><a href="parking.php#register" class="button large">新用户立减20元</a></li>
                                 </ul>
 
 
@@ -59,6 +61,7 @@
 						<section>
 							<form method="post" action="parkingRegister.php">
 								<div class="fields">
+                                    <a name="register"><h2>Register成为新用户</h2></a>
 									<div class="field">
 										<label for="name">姓名Name</label>
 										<input type="text" name="name" id="name" placeholder="王晓宁" />
@@ -112,20 +115,6 @@
 
 			</div>
 
-		<!-- Scripts -->
-            <script type="text/javascript">
-                // 百度地图API功能
-                var map = new BMap.Map("mapG");    // 创建Map实例
-                map.centerAndZoom(new BMap.Point(121.404, 31.915), 13);  // 初始化地图,设置中心点坐标和地图级别
-                //添加地图类型控件
-                map.addControl(new BMap.MapTypeControl({
-                    mapTypes:[
-                        BMAP_NORMAL_MAP,
-                        BMAP_HYBRID_MAP
-                    ]}));
-                map.setCurrentCity("上海");          // 设置地图显示的城市 此项是必须设置的
-                map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
-            </script>
 			<script src="../assets/js/jquery.min.js"></script>
 			<script src="../assets/js/jquery.scrollex.min.js"></script>
 			<script src="../assets/js/jquery.scrolly.min.js"></script>
@@ -133,6 +122,8 @@
 			<script src="../assets/js/breakpoints.min.js"></script>
 			<script src="../assets/js/util.js"></script>
 			<script src="../assets/js/main.js"></script>
+            <script src="../assets/js/map.js"></script>
+
 
 	</body>
 </html>

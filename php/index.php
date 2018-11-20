@@ -96,7 +96,9 @@
 						<!-- Featured Post -->
 							<article class="post featured">
 								<header class="major">
-									<span class="date">Oct 14, 2018</span>
+									<span class="date"><?php
+                                        echo " " . date("Y/m/d") . "<br>";
+                                        ?></span>
 									<h2><a href="#">Goods<br />
 										跑腿代购</a></h2>
 									<p>是否曾经在停车场内为了寻找车位而苦苦兜圈？是否曾经在便利店里为了生活缴费而无聊等待？
@@ -108,11 +110,12 @@
 
 								<!-- ！！！！Map -->
 								<div id="mapG" style="z-index:999;height:500px;weight:500px">
+                                    <div id="r-result" style="z-index:999;height:500px;weight:500px"></div>
 
 								</div>
 								<!--<a href="#" class="image main"><img src="../images/bg.jpg" alt="" /></a>-->
 								<ul class="actions special">
-									<li><a href="#" class="button large">查找周边</a></li>
+									<li><a class="button large" onclick="searchAround();">查找周边</a></li>
 								</ul>
 							</article>
 
