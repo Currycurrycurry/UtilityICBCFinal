@@ -2,6 +2,17 @@
 <html xmlns="http://www.w3.org/1999/html">
 	<head>
 		<title>Utilities for ICBC</title>
+        <style>
+            .mask{width: 100%;height: 100%;background:#000;position: absolute;top: 0px;left:0px;opacity: 0.4;z-index: 8000; display: none;-moz-user-select: none; -webkit-user-select: none;}
+            .dialog{border:solid;width: 300px;background:#fff; position: absolute;z-index: 9000;padding-bottom: 10px; display: none;-moz-user-select: none; -webkit-user-select: none;}
+            .dialog_head{width: 100%;height:50px;background:#4B4B4B;text-align: center;line-height: 50px;color: #eee; cursor: move;}
+            .dialog_content{width: 100%;height:140px;}
+
+            .mask2{width: 100%;height: 100%;background:#000;position: absolute;top: 0px;left:0px;opacity: 0.4;z-index: 8000; display: none;-moz-user-select: none; -webkit-user-select: none;}
+            .dialog2{border:solid;width: 300px;background:#fff; position: absolute;z-index: 9000;padding-bottom: 10px; display: none;-moz-user-select: none; -webkit-user-select: none;}
+            .dialog_head2{width: 100%;height:50px;background:#4B4B4B;text-align: center;line-height: 50px;color: #eee; cursor: move;}
+            .dialog_content2{width: 100%;height:500px;}
+        </style>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="../assets/css/main.css" />
@@ -40,35 +51,9 @@
 
                         <?php include "createNav.php" ?>
                     </nav>
-                <!--登陆-->
-                <div id="loginPart">
-                    <div class="overCurtain"></div>
-                    <div class="hide-center" style="border-style: solid;border-width: thick;">
-                        <div id="formhead">
-<!--                            <button type="button" id="close">X</button>-->
-                            <a href="#" id="close" class="icon alt fa-close" style="color:black;size: 10px;"><span class="label">微信Wechat</span></a>
-                            <h3 id="signIn" style="margin: 0 auto;display: inline;">登陆Log In</h3>
-                            <br><hr>
-                        </div>
-                        <form id="formbody" method = "post" action = 'login.php'>
-                            <div class="loginUserName">
-                                <input id="input-topright-loginInput" name="userName" class="loginInput" placeholder="userName" type="text" value="admin">
-                            </div>
-                            <div class="loginPassword">
-                                <input id="input-bottomright-loginInput" name="password" class="loginInput" placeholder="password" type="password" style="border-bottom-right-radius:5px;">
-                            </div>
-                            <div id="formfoot">
-                                <a href="login.php" type="submit" style="padding-left:8px;padding-right:8px; padding-top: 2px;padding-bottom: 2px;" class="button large">Sign In </a>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-
-
-
 
 <!--                充值弹窗-->
-<!--                width:100%;height:600px;-->
+
                 <div id="rechargePart" style="">
                     <div class="RoverCurtain"></div>
                     <div class="Rhide-center" style="border: solid;border-width: thick;">
@@ -89,7 +74,52 @@
                     </div>
 
 
+<!--            register-->
+                <div id="mask" class="mask"></div>
+                <div class="dialog" id="dialog">
 
+                    <div class="dialog_head" id="move_part">登陆Log In</div>
+                    <div class="dialog_content">
+                        <form id="formbody" method = "post" action = 'login.php'>
+                            <div class="loginUserName">
+                                <input id="input-topright-loginInput" name="userName" class="loginInput" placeholder="userName" type="text" value="admin">
+                            </div>
+                            <div class="loginPassword">
+                                <input id="input-bottomright-loginInput" name="password" class="loginInput" placeholder="password" type="password" style="border-bottom-right-radius:5px;">
+                            </div>
+                            <div id="formfoot" style="margin:2px 2px 2px 2px;">
+                                <a href="login.php" type="submit"  class="button small">Sign In </a>
+                                <div class="button small" id="close2333"> <a id="close">返回首页</a>
+
+                            </div>
+                        </form>
+                    </div>
+
+                    </div>
+
+<!--                充值-->
+<!--                <div id="mask2" class="mask2"></div>-->
+<!--                <div class="dialog2" id="dialog2">-->
+<!---->
+<!--                    <div class="dialog_head2" id="move_part2">充值Recharge</div>-->
+<!--                    <div class="dialog_content2">-->
+<!--                        <form id="Rformhead" method="post" action = 'PayForParking.php'>-->
+<!--                            <button type="button" id="Rclose">X</button>-->
+<!--                            <p id="reCharge" style="margin: 0 auto;display: inline;">充值Recharge</p><br/>-->
+<!---->
+<!--                            请输入充值金额：<input type = "text"height="30px" width="120px" name = "amount" value = '100'/>-->
+<!--                            <br><hr>-->
+<!--                        </form>-->
+<!--                        <div id="Rformbody">-->
+<!--                            <video height="120px" autoplay="autoplay"></video><br/>-->
+<!--                            <canvas id="canvas1" height="120px" ></canvas><hr />-->
+<!--                            <input type="button" title="拍照" value="支付" onclick="getPhoto();alert('支付成功！');" />-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    </div>-->
+
+
+            </div>
 
                 <div id="main">
 
@@ -226,27 +256,27 @@
 									<div class="field">
 										<label for="name">用户名Name</label>
 										<input type="text" placeholder="示例：王小明123" style="width: 250px" name="name" id="name" onblur="EmptyUsernameHint();WrongUsernameFormHint();" />
-                                        <p class="alertWord hide" style="color: red;" id="promptEN">用户名不能为空！</p>
-                                        <p class="alertWord hide" style="color: red;" id="promptWrongUser">用户名格式错误！</p>
+                                        <p class="hide" style="color: red;" id="promptEN">用户名不能为空！</p>
+                                        <p class="hide" style="color: red;" id="promptWrongUser">用户名格式错误！</p>
 									</div>
 									<div class="field">
 										<label for="cardNumber">卡号Card Number</label>
 										<input type="number" style="width: 250px" name="cardNumber" placeholder="xxxx-xxxx-xxxx-xxxx" id="cardNumber" onblur="EmptyCardNumber();WrongCardNumberHint();" />
                                         <p>没有工行卡？<a href="https://epass.icbc.com.cn/regist/regist_index.jsp">点此申请</a></p>
-                                        <p class="alertWord hide" style="color: red;" id="promptEC">卡号不能为空！</p>
-                                        <p class="alertWord hide" style="color: red;" id="promptWrongCard">卡号格式错误！</p>
+                                        <p class="hide" style="color: red;" id="promptEC">卡号不能为空！</p>
+                                        <p class="hide" style="color: red;" id="promptWrongCard">卡号格式错误！</p>
 									</div>
 
                                     <div class="field">
                                         <label for="password">密码Password</label>
                                         <input type="password" style="width: 250px" name="password" id="password" onblur="EmptyPasswordHint();WrongPasswordFormHint();" /><br>
-                                        <p class="alertWord hide"  style="color: red;" id="promptEP">密码不能为空！</p>
-                                        <p class="alertWord hide"  style="color: red;" id="promptErrorP">密码格式错误！</p>
+                                        <p class="hide"  style="color: red;" id="promptEP">密码不能为空！</p>
+                                        <p class=" hide"  style="color: red;" id="promptErrorP">密码格式错误！</p>
 
                                         <label for="Cpassword">确认密码Password</label>
                                         <input type="password" style="width: 250px" name="Cpassword" id="Cpassword" onblur="DifferentPasswordHint();EmptyCPasswordHint();" />
-                                        <p class="alertWord hide" style="color: red;" id="promptDP">密码不相同！</p>
-                                        <p class="alertWord hide" style="color: red;" id="promptEmptyPassWord">请确认密码！</p>
+                                        <p class="hide" style="color: red;" id="promptDP">密码不相同！</p>
+                                        <p class="hide" style="color: red;" id="promptEmptyPassWord">请确认密码！</p>
                                         <hr>
                                     </div>
 
@@ -375,6 +405,178 @@
             }
 
             //视频
+
+        </script>
+        <script>
+            $(document).ready(function() {
+                var $dialog = $("#dialog");
+                var $mask = $("#mask");
+
+                //自动居中对话框
+                function autoCenter(el) {
+                    var bodyW = $(window).width();
+                    var bodyH = $(window).height();
+                    var elW = el.width();
+                    var elH = el.height();
+                    $dialog.css({"left": (bodyW - elW) / 2 + 'px', "top": (bodyH - elH) / 2 + 'px'});
+                };
+
+                //点击弹出对话框
+                $("#login").click(function () {
+                    $dialog.css("display", "block");
+                    $mask.css("display", "block");
+                    autoCenter($dialog);
+                });
+
+                //禁止选中对话框内容
+                if (document.attachEvent) {//ie的事件监听，拖拽div时禁止选中内容，firefox与chrome已在css中设置过-moz-user-select: none; -webkit-user-select: none;
+                    g('dialog').attachEvent('onselectstart', function () {
+                        return false;
+                    });
+                }
+                //声明需要用到的变量
+                var mx = 0, my = 0;      //鼠标x、y轴坐标（相对于left，top）
+                var dx = 0, dy = 0;      //对话框坐标（同上）
+                var isDraging = false;      //不可拖动
+
+                //鼠标按下
+                $("#move_part").mousedown(function (e) {
+                    e = e || window.event;
+                    mx = e.pageX;     //点击时鼠标X坐标
+                    my = e.pageY;     //点击时鼠标Y坐标
+                    dx = $dialog.offset().left;
+                    dy = $dialog.offset().top;
+                    isDraging = true;      //标记对话框可拖动
+                });
+
+                //鼠标移动更新窗口位置
+                $(document).mousemove(function (e) {
+                    var e = e || window.event;
+                    var x = e.pageX;      //移动时鼠标X坐标
+                    var y = e.pageY;      //移动时鼠标Y坐标
+                    if (isDraging) {        //判断对话框能否拖动
+                        var moveX = dx + x - mx;      //移动后对话框新的left值
+                        var moveY = dy + y - my;      //移动后对话框新的top值
+                        //设置拖动范围
+                        var pageW = $(window).width();
+                        var pageH = $(window).height();
+                        var dialogW = $dialog.width();
+                        var dialogH = $dialog.height();
+                        var maxX = pageW - dialogW;       //X轴可拖动最大值
+                        var maxY = pageH - dialogH;       //Y轴可拖动最大值
+                        moveX = Math.min(Math.max(0, moveX), maxX);     //X轴可拖动范围
+                        moveY = Math.min(Math.max(0, moveY), maxY);     //Y轴可拖动范围
+                        //重新设置对话框的left、top
+                        $dialog.css({"left": moveX + 'px', "top": moveY + 'px'});
+                    }
+                    ;
+                });
+
+                //鼠标离开
+                $("#move_part").mouseup(function () {
+                    isDraging = false;
+                });
+
+                //点击关闭对话框
+                $("#close2333").click(function () {
+                    $dialog.css("display", "none");
+                    $mask.css("display", "none");
+                    // });
+                    //
+                    //窗口大小改变时，对话框始终居中
+                    window.onresize = function () {
+                        autoCenter($dialog);
+                    };
+                });
+            });
+
+        </script>
+        <script>
+            $(document).ready(function(){
+                var $dialog2 = $("#dialog2");
+                var $mask2 = $("#mask2");
+
+                //自动居中对话框
+                function autoCenter(el){
+                    var bodyW2 = $(window).width();
+                    var bodyH2 = $(window).height();
+                    var elW2 = el.width();
+                    var elH2 = el.height();
+                    $dialog2.css({"left":(bodyW2-elW2)/2 + 'px',"top":(bodyH2-elH2)/2 + 'px'});
+                };
+
+                //点击弹出对话框
+                $("#recharge").click(function(){
+                    $dialog2.css("display","block");
+                    $mask2.css("display","block");
+                    autoCenter($dialog2);
+                });
+
+                //禁止选中对话框内容
+                if(document.attachEvent) {//ie的事件监听，拖拽div时禁止选中内容，firefox与chrome已在css中设置过-moz-user-select: none; -webkit-user-select: none;
+                    g('dialog2').attachEvent('onselectstart', function() {
+                        return false;
+                    });
+                }
+                //声明需要用到的变量
+                var mx2 = 0,my2 = 0;      //鼠标x、y轴坐标（相对于left，top）
+                var dx2 = 0,dy2 = 0;      //对话框坐标（同上）
+                var isDraging2 = false;      //不可拖动
+
+                //鼠标按下
+                $("#move_part2").mousedown(function(e){
+                    e = e || window.event;
+                    mx2 = e.pageX;     //点击时鼠标X坐标
+                    my2 = e.pageY;     //点击时鼠标Y坐标
+                    dx2 = $dialog2.offset().left;
+                    dy2 = $dialog2.offset().top;
+                    isDraging2 = true;      //标记对话框可拖动
+                });
+
+                //鼠标移动更新窗口位置
+                $(document).mousemove(function(e){
+                    var e2 = e || window.event;
+                    var x2 = e2.pageX;      //移动时鼠标X坐标
+                    var y2 = e2.pageY;      //移动时鼠标Y坐标
+                    if(isDraging2){        //判断对话框能否拖动
+                        var moveX2 = dx2 + x2 - mx2;      //移动后对话框新的left值
+                        var moveY2 = dy2 + y2 - my2;      //移动后对话框新的top值
+                        //设置拖动范围
+                        var pageW2 = $(window).width();
+                        var pageH2 = $(window).height();
+                        var dialogW2= $dialog2.width();
+                        var dialogH2 = $dialog2.height();
+                        var maxX2 = pageW2 - dialogW2;       //X轴可拖动最大值
+                        var maxY2= pageH2 - dialogH2;       //Y轴可拖动最大值
+                        moveX2 = Math.min(Math.max(0,moveX2),maxX2);     //X轴可拖动范围
+                        moveY2 = Math.min(Math.max(0,moveY2),maxY2);     //Y轴可拖动范围
+                        //重新设置对话框的left、top
+                        $dialog2.css({"left":moveX2 + 'px',"top":moveY2 + 'px'});
+                    };
+                });
+
+                //鼠标离开
+                $("#move_part2").mouseup(function(){
+                    isDraging2 = false;
+                });
+
+                //点击关闭对话框
+                $("#Rclose").click(function(){
+                    $dialog2.css("display","none");
+                    $mask2.css("display","none");
+                });
+
+                //窗口大小改变时，对话框始终居中
+                window.onresize = function(){
+                    autoCenter($dialog2);
+                };
+            });
+
+
+
+
+
+
 
         </script>
     </body>

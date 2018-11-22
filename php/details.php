@@ -61,51 +61,114 @@
 
         <!--                充值弹窗-->
         <!--                width:100%;height:600px;-->
-        <div id="rechargePart" style="">
-            <div class="RoverCurtain"></div>
-            <div class="Rhide-center" style="border: solid;border-width: thick;">
-                <form id="Rformhead" method="post" action = 'PayForParking.php'>
-                    <button type="button" id="Rclose">X</button>
-                    <p id="reCharge" style="margin: 0 auto;display: inline;">充值Recharge</p><br/>
+        <!--        <div id="rechargePart">-->
+        <!--            <div class="RoverCurtain"></div>-->
+        <!--            <div class="Rhide-center" style="border: solid;border-width: thick;">-->
+        <!--                <form id="Rformhead" method="post" action = 'PayForParking.php'>-->
+        <!--                    <button type="button" id="Rclose">X</button>-->
+        <!--                    <p id="reCharge" style="margin: 0 auto;display: inline;">充值Recharge</p><br/>-->
+        <!---->
+        <!--                    请输入充值金额：<input type = "text"height="30px" width="120px" name = "amount" value = '100'/>-->
+        <!--                    <br><hr>-->
+        <!--                </form>-->
+        <!--                <div id="Rformbody">-->
+                            <!--                           <img src="../images/bread.png">-->
+        <!--                    <video height="120px" autoplay="autoplay"></video><br/>-->
+        <!--                    <canvas id="canvas1" height="120px" ></canvas><hr />-->
+        <!--                    <input type="button" title="拍照" value="支付" onclick="getPhoto();alert('支付成功！');" />-->
+        <!--                </div>-->
+        <!--            </div>-->
+        <!--        </div>-->
 
-                    请输入充值金额：<input type = "text"height="30px" width="120px" name = "amount" value = '100'/>
-                    <br><hr>
-                </form>
-                <div id="Rformbody">
-                    <!--                           <img src="../images/bread.png">-->
-                    <video height="120px" autoplay="autoplay"></video><br/>
-                    <canvas id="canvas1" height="120px" ></canvas><hr />
-                    <input type="button" title="拍照" value="支付" onclick="getPhoto();alert('支付成功！');" />
-                </div>
-            </div>
-        </div>
-
-
-        <!-- Image -->
         <header class="major">
-            <h1>Family<br />
-                全家</h1>
+									<span class="date"><?php
+                                        echo " " . date("Y/m/d") . "<br>";
+                                        ?></span>
+            <h1><a href="#">Family<br />
+                    全家</a></h1>
+
         </header>
+
         <span class="image fit"><img src="../images/familybg.jpg" alt="" /></span>
+        <!-- Image -->
+<!--        <header class="major">-->
+<!--            <h1>Family<br />-->
+<!--                全家</h1>-->
+<!--        </header>-->
+
         <div class="box alt">
             <div class="row gtr-50 gtr-uniform">
-                <div class="col-4"><span class="image fit"><img style="width:250px;height:200px;" src="../images/pic02.jpg" alt="" /><label>￥<a href="#" class="icon fa-plus"></a></label><a href="#" class="button small">第二份1.8折</a></span></div>
-                <div class="col-4"><span class="image fit"><img style="width:250px;height:200px;" src="../images/pic03.jpg" alt="" /></span></div>
-                <div class="col-4"><span class="image fit"><img style="width:250px;height:200px;" src="../images/pic04.jpg" alt="" /></span></div>
+                <div class="col-4"><span class="image fit"><label>休闲零食</label><img style="width:250px;height:200px;" src="../images/family/chips.jpeg" alt="" /><label class="goodName">乐事薯片（原味）</label><label class="goodPrice">￥7</label><a href="#" class="button small">第二份1.8折</a>  <a class="button small add" onclick="alert('添加成功！')">加入购物车</a></span></div>
+                <div class="col-4"><span class="image fit"><label>醇享咖啡</label><img style="width:250px;height:200px;" src="../images/family/coffee.jpeg" alt="" /><label class="goodName">焦糖拿铁咖啡 </label><label class="goodPrice">￥14</label><a href="#" class="button small">第二份1.8折</a>  <a onclick="alert('添加成功！')" class="button small  add">加入购物车</a></span></div>
+                <div class="col-4"><span class="image fit"><label>日用百货</label><img style="width:250px;height:200px;" src="../images/family/napkin.jpeg" alt="" /><label class="goodName">得宝卫生湿巾 </label><label class="goodPrice">￥6.8</label><a href="#" class="button small">第二份1.8折</a>  <a onclick="alert('添加成功！')" class="button small add">加入购物车</a></span></div>
                 <!-- Break -->
-                <div class="col-4"><span class="image fit"><img style="width:250px;height:200px;" src="../images/pic04.jpg" alt="" /></span></div>
-                <div class="col-4"><span class="image fit"><img style="width:250px;height:200px;" src="../images/pic02.jpg" alt="" /></span></div>
-                <div class="col-4"><span class="image fit"><img style="width:250px;height:200px;" src="../images/pic03.jpg" alt="" /></span></div>
+                <div class="col-4"><span class="image fit"><label>面包甜点</label><img style="width:250px;height:200px;" src="../images/family/bread.jpg" alt="" /><label class="goodName">椰丝餐包 </label><label class="goodPrice">￥8</label><a href="#" class="button small">第二份1.8折</a>  <a onclick="alert('添加成功！')" class="button small add">加入购物车</a></span></div>
+                <div class="col-4"><span class="image fit"><label>饱腹神器</label><img style="width:250px;height:200px;" src="../images/family/dinner.jpeg" alt="" /><label class="goodName">奥尔良整只鸡腿饭 </label><label class="goodPrice">￥17.8</label><a href="#" class="button small">第二份1.8折</a>  <a onclick="alert('添加成功！')" class="button small add">加入购物车</a></span></div>
+                <div class="col-4"><span class="image fit"><label>美妆护理</label><img style="width:250px;height:200px;" src="../images/family/makeup.jpeg" alt="" /><label class="goodName">杰俊密集焕亮面膜 </label><label class="goodPrice">￥24.8</label><a href="#" class="button small">第二份1.8折</a>  <a onclick="alert('添加成功！')" class="button small add">加入购物车</a></span></div>
                 <!-- Break -->
-                <div class="col-4"><span class="image fit"><img style="width:250px;height:200px;" src="../images/pic03.jpg" alt="" /></span></div>
-                <div class="col-4"><span class="image fit"><img style="width:250px;height:200px;" src="../images/pic04.jpg" alt="" /></span></div>
-                <div class="col-4"><span class="image fit"><img style="width:250px;height:200px;" src="../images/pic02.jpg" alt="" /></span></div>
+                <div class="col-4"><span class="image fit"><label>营养奶品</label><img style="width:250px;height:200px;" src="../images/family/milk.jpeg" alt="" /><label class="goodName">香飘飘MECO牛乳茶 </label><label class="goodPrice">￥11.9</label><a href="#" class="button small">第二份1.8折</a>  <a onclick="alert('添加成功！')" class="button small add">加入购物车</a></span></div>
+                <div class="col-4"><span class="image fit"><label>开心糖果</label><img style="width:250px;height:200px;" src="../images/family/sweet.jpeg" alt="" /><label class="goodName">CORORO草莓味软糖 </label><label class="goodPrice">￥10</label><a href="#" class="button small">第二份1.8折</a>  <a onclick="alert('添加成功！')" class="button small add">加入购物车</a></span></div>
+                <div class="col-4"><span class="image fit"><label>精选水饮</label><img style="width:250px;height:200px;" src="../images/family/water.jpeg" alt="" /><label class="goodName">茉莉蜜茶 </label><label class="goodPrice">￥5</label><a href="#" class="button small">第二份1.8折</a>  <a onclick="alert('添加成功！')" class="button small add">加入购物车</a></span></div>
             </div>
         </div>
 
-        <h3>Left &amp; Right</h3>
-        <p><span class="image left"><img src="../images/pic08.jpg" alt="" /></span>Lorem ipsum dolor sit accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Vestibulum ante ipsum primis in faucibus magna blandit adipiscing eu felis iaculis.</p>
-        <p><span class="image right"><img src="../images/pic09.jpg" alt="" /></span>Lorem ipsum dolor sit accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Vestibulum ante ipsum primis in faucibus magna blandit adipiscing eu felis iaculis.</p>
+        <h3>ShoppingCart购物车</h3>
+
+        <div class="table-wrapper">
+            <table id="cart">
+                <thead>
+                <tr>
+                    <th>商品名称Name</th>
+                    <th>数量Number</th>
+                    <th>价格Price</th>
+                    <th>小计sum</th>
+                    <th>删除delete</th>
+                </tr>
+                </thead>
+                <tbody id="cartTr">
+<!--                <tr class="1">-->
+<!--                    <td>乐事薯片（原味）</td>-->
+<!--                    <td><span><a class="icon fa-minus"></a> <span> 1 </span> <a class="icon fa-plus"></a></span></td>-->
+<!--                    <td>￥7</td>-->
+<!--                    <td>小计：</td>-->
+<!--                    <td><a class="button small delete" id="delete" >删除</a></td>-->
+<!--                </tr>-->
+<!--                <tr>-->
+<!--                    <td>焦糖拿铁咖啡</td>-->
+<!--                    <td><span><a class="icon fa-minus"></a> <span> 1 </span> <a class="icon fa-plus"></a></span></td>-->
+<!--                    <td>￥14</td>-->
+<!--                    <td>小计：</td>-->
+<!--                    <td><a class="button small delete">删除</a></td>-->
+<!--                </tr>-->
+<!--                <tr>-->
+<!--                    <td>得宝卫生湿巾</td>-->
+<!--                    <td><span><a class="icon fa-minus"></a> <span> 1 </span> <a class="icon fa-plus"></a></span></td>-->
+<!--                    <td>￥6.8</td>-->
+<!--                    <td>小计：</td>-->
+<!--                    <td><a class="button small delete">删除</a></td>-->
+<!--                </tr>-->
+<!--                <tr>-->
+<!--                    <td>Item 4</td>-->
+<!--                    <td><span><a class="icon fa-minus"></a> <span> 0 </span> <a class="icon fa-plus"></a></span></td>-->
+<!--                    <td>19.99</td>-->
+<!--                    <td><a href="#" class="button small">删除</a></td>-->
+<!--                </tr>-->
+<!--                <tr>-->
+<!--                    <td>Item 5</td>-->
+<!--                    <td><span><a class="icon fa-minus"></a> <span> 0 </span> <a class="icon fa-plus"></a></span></td>-->
+<!--                    <td>29.99</td>-->
+<!--                    <td><a href="#" class="button small">删除</a></td>-->
+<!--                </tr>-->
+                </tbody>
+                <tfoot>
+                <tr>
+                    <td colspan="2">商品一共<a id="goodNumber">0</a>件</span></td>
+                    <td colspan="2" id="goodSum">0.00</td>
+                    <td ><a href="#" class="button primary small" id="checkout">结算</a></td>
+                </tr>
+                </tfoot>
+            </table>
+        </div>
 
         <hr />
 
@@ -116,18 +179,18 @@
                     <form method="post" action="#">
                         <div class="fields">
                             <div class="field">
-                                <label for="name">姓名Name</label>
+                                <label for="name" style="width: 80px">姓名Name</label>
                                 <input type="text" name="name" id="name" placeholder="王晓宁" />
                             </div>
 
                             <div class="field">
-                                <label for="password">支付密码password  <a onclick="alert('小额免密协议');">开启小额免密支付</a></label>
+                                <label for="password" style="width: 260px" >支付密码password  <a onclick="alert('小额免密协议');">开启小额免密支付</a></label>
 
                                 <input type="password" name="password" id="password" />
                             </div>
                         </div>
                         <ul class="actions">
-                            <li><input type="submit" value="开通服务" /></li>
+                            <li><input type="submit" value="开通会员服务" /></li>
 
                         </ul>
                     </form>
@@ -157,6 +220,7 @@
 
     </div>
 
+
     <!-- Scripts -->
     <script src="../assets/js/jquery.min.js"></script>
     <script src="../assets/js/jquery.scrollex.min.js"></script>
@@ -166,5 +230,132 @@
     <script src="../assets/js/util.js"></script>
     <script src="../assets/js/main.js"></script>
     <script src="../assets/js/loginPop.js"></script>
+
+    <script>
+
+        var tmpSum;
+
+
+        // $(document).ready(function(){
+        //     $(".total").each(function(){
+        //         tmpSum +=parseFloat(($(this).text()+"").substring(1));
+        //     });
+        //
+        //     $("#goodSum").text(tmpSum+"");
+        // });
+
+        $("#cartTr").on("click",".delete",function(){
+            $(this).parent().parent().remove();
+
+            var tmp = parseInt($("#goodNumber").text()+"")-1;
+            $("#goodNumber").text(tmp+"");
+
+            tmpSum = 0.00;
+            $(".total").each(function(){
+                tmpSum +=parseFloat(($(this).text()+"").substring(1));
+            });
+
+            $("#goodSum").text(tmpSum+"");
+
+
+
+        });
+
+         $("#cartTr").on("click",".fa-plus",function(){
+             var oldVal = $(this).siblings("span").text()+"";
+             //alert(oldVal);
+             var newVal =parseInt(oldVal)+1;
+             //alert(newVal);
+             $(this).siblings("span").text(newVal+"");
+
+             var tmpStr = $(this).parents(".goodTr").find(".priceTr").text()+"";
+             var goodPrice = parseFloat(tmpStr.substring(1));
+
+             //alert(goodPrice);
+
+             var newTotal = newVal * goodPrice;
+             //$(this).nextAll(".total").text(newVal+"");
+             $(this).parents(".goodTr").find(".total").text("￥"+newTotal+"");
+             //alert(goodPrice);
+
+             var tmp = parseInt($("#goodNumber").text()+"")+1;
+             $("#goodNumber").text(tmp+"");
+
+             tmpSum = 0.00;
+             $(".total").each(function(){
+                 tmpSum +=parseFloat(($(this).text()+"").substring(1));
+             });
+
+             $("#goodSum").text(tmpSum+"");
+
+         });
+
+        $("#cartTr").on("click",".fa-minus",function(){
+            var oldVal = $(this).siblings("span").text()+"";
+            //alert(oldVal);
+            var newVal =(parseInt(oldVal)-1)>0?(parseInt(oldVal)-1):1;
+            //alert(newVal);
+            $(this).siblings("span").text(newVal+"");
+
+            var tmpStr = $(this).parents(".goodTr").find(".priceTr").text()+"";
+            var goodPrice = parseFloat(tmpStr.substring(1));
+
+            //alert(goodPrice);
+
+            var newTotal = newVal * goodPrice;
+            //$(this).nextAll(".total").text(newVal+"");
+            $(this).parents(".goodTr").find(".total").text("￥"+newTotal+"");
+            //alert(goodPrice);
+
+            var tmp = parseInt($("#goodNumber").text()+"")-1;
+            $("#goodNumber").text(tmp+"");
+
+            tmpSum = 0.00;
+            $(".total").each(function(){
+                tmpSum +=parseFloat(($(this).text()+"").substring(1));
+            });
+
+            $("#goodSum").text(tmpSum+"");
+
+        });
+
+        $(".add").click(
+            function(){
+                var goodNmae = $(this).prevAll(".goodName").text();
+                //alert(goodNmae);
+                var goodPrice = $(this).prevAll(".goodPrice").text();
+                //alert(goodPrice);
+                var newGood = "<tr class=\"goodTr\">\n" +
+                    "                    <td>"+goodNmae+"</td>\n" +
+                    "                    <td><span><a class=\"icon fa-minus\"></a> <span> 1 </span> <a class=\"icon fa-plus\"></a></span></td>\n" +
+                    "                    <td class=\"priceTr\">"+goodPrice+"</td>\n" +
+                    "                    <td class=\"total\" >"+goodPrice+"</td>\n" +
+                    "                    <td><a class=\"button small delete\" id=\"delete\" >删除</a></td>\n" +
+                    "                </tr>";
+                $("#cartTr").append(newGood);
+
+                var tmp = parseInt($("#goodNumber").text()+"")+1;
+                $("#goodNumber").text(tmp+"");
+
+                tmpSum = 0.00;
+                $(".total").each(function(){
+                    tmpSum +=parseFloat(($(this).text()+"").substring(1));
+                });
+
+                $("#goodSum").text(tmpSum+"");
+
+            }
+        );
+
+
+        //待补充：人脸识别支付 商户收单二维码
+        $("#checkout").click(
+            function () {
+                submit();
+            }
+        );
+
+
+    </script>
 </body>
 </html>

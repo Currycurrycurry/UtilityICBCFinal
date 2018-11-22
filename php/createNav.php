@@ -18,6 +18,7 @@ function showUnloged(){
     echo '<ul class="icons">
 							<li><a class="icon fa-user" id="login"><span class="label">Login</span></a>登陆</li>
 							<li><a href="index.php#register" class="icon fa-user-circle"><span class="label">Register</span></a>注册</li>
+							<li><a class="icon fa-money" id="recharge"><span class="label">Recharge</span></a>充值</li>
 						
 
 						</ul>';

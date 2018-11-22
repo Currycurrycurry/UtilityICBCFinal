@@ -4680,7 +4680,7 @@ input, select, textarea {
 	top:500px;
 	margin:0 auto;
 	display:none;
-	z-index:1;
+	z-index:9999999;
 }
 .hide-center #formhead {
 	width:300px;
@@ -4859,7 +4859,8 @@ input, select, textarea {
 
 .alertWord {
 	color:red;
-	display:none;
+	display: block;
+
 }
 
 .hide{

@@ -129,7 +129,7 @@
 									</div>
 								</div>
 								<ul class="actions">
-									<li><input type="submit" value="开通服务" /></li>
+									<li><input type="submit" value="开通包月服务" /></li>
 
 								</ul>
 							</form>
