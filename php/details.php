@@ -5,6 +5,13 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="../assets/css/main.css" />
+    <link rel="shortcut icon" href="build2/TemplateData/favicon.ico">
+    <link rel="stylesheet" href="build2/TemplateData/style.css">
+    <script src="build2/TemplateData/UnityProgress.js"></script>
+    <script src="build2/Build/UnityLoader.js"></script>
+    <script>
+        var gameInstance = UnityLoader.instantiate("gameContainer", "build2/Build/build2.json", {onProgress: UnityProgress});
+    </script>
     <noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
 </head>
 <body class="is-preload">
@@ -31,6 +38,7 @@
 
     <!-- Main -->
     <div id="main">
+        <h3>Family新品展示</h3>
 
         <!--登陆-->
         <div id="loginPart">
@@ -80,6 +88,34 @@
         <!--            </div>-->
         <!--        </div>-->
 
+
+<!--        <span class="image fit"><img src="../images/familybg.jpg" alt="" /></span>-->
+        <div class="webgl-content" style="position:absolute;top:300px;left:540px;z-index:99999;">
+            <div id="gameContainer" style="width: 600px; height: 400px"></div>
+            <div class="footer">
+                <div class="title">新品3D展示</div>
+                <div class="fullscreen" onclick="gameInstance.SetFullscreen(1)"></div>
+
+            </div>
+        </div>
+<!--        weggl!!!!!!!!-->
+        <!-- Image -->
+<!--        <header class="major">-->
+<!--            <h1>Family<br />-->
+<!--                全家</h1>-->
+<!--        </header>-->
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+
+
         <header class="major">
 									<span class="date"><?php
                                         echo " " . date("Y/m/d") . "<br>";
@@ -89,12 +125,6 @@
 
         </header>
 
-        <span class="image fit"><img src="../images/familybg.jpg" alt="" /></span>
-        <!-- Image -->
-<!--        <header class="major">-->
-<!--            <h1>Family<br />-->
-<!--                全家</h1>-->
-<!--        </header>-->
 
         <div class="box alt">
             <div class="row gtr-50 gtr-uniform">
@@ -126,45 +156,13 @@
                 </tr>
                 </thead>
                 <tbody id="cartTr">
-<!--                <tr class="1">-->
-<!--                    <td>乐事薯片（原味）</td>-->
-<!--                    <td><span><a class="icon fa-minus"></a> <span> 1 </span> <a class="icon fa-plus"></a></span></td>-->
-<!--                    <td>￥7</td>-->
-<!--                    <td>小计：</td>-->
-<!--                    <td><a class="button small delete" id="delete" >删除</a></td>-->
-<!--                </tr>-->
-<!--                <tr>-->
-<!--                    <td>焦糖拿铁咖啡</td>-->
-<!--                    <td><span><a class="icon fa-minus"></a> <span> 1 </span> <a class="icon fa-plus"></a></span></td>-->
-<!--                    <td>￥14</td>-->
-<!--                    <td>小计：</td>-->
-<!--                    <td><a class="button small delete">删除</a></td>-->
-<!--                </tr>-->
-<!--                <tr>-->
-<!--                    <td>得宝卫生湿巾</td>-->
-<!--                    <td><span><a class="icon fa-minus"></a> <span> 1 </span> <a class="icon fa-plus"></a></span></td>-->
-<!--                    <td>￥6.8</td>-->
-<!--                    <td>小计：</td>-->
-<!--                    <td><a class="button small delete">删除</a></td>-->
-<!--                </tr>-->
-<!--                <tr>-->
-<!--                    <td>Item 4</td>-->
-<!--                    <td><span><a class="icon fa-minus"></a> <span> 0 </span> <a class="icon fa-plus"></a></span></td>-->
-<!--                    <td>19.99</td>-->
-<!--                    <td><a href="#" class="button small">删除</a></td>-->
-<!--                </tr>-->
-<!--                <tr>-->
-<!--                    <td>Item 5</td>-->
-<!--                    <td><span><a class="icon fa-minus"></a> <span> 0 </span> <a class="icon fa-plus"></a></span></td>-->
-<!--                    <td>29.99</td>-->
-<!--                    <td><a href="#" class="button small">删除</a></td>-->
-<!--                </tr>-->
+
                 </tbody>
                 <tfoot>
                 <tr>
                     <td colspan="2">商品一共<a id="goodNumber">0</a>件</span></td>
                     <td colspan="2" id="goodSum">0.00</td>
-                    <td ><a href="#" class="button primary small" id="checkout">结算</a></td>
+                    <td ><button class="button small" id="checkout" value="结算">结算</button></td>
                 </tr>
                 </tfoot>
             </table>
@@ -351,7 +349,9 @@
         //待补充：人脸识别支付 商户收单二维码
         $("#checkout").click(
             function () {
-                submit();
+                //
+               alert("支付成功！");
+
             }
         );
 

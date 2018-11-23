@@ -1,3 +1,4 @@
+
 <!DOCTYPE HTML>
 <html>
 	<head>
@@ -89,76 +90,69 @@
 									<span class="date"><?php
                                         echo " " . date("Y/m/d") . "<br>";
                                         ?></span>
-									<h1>Come Parking<br />
-										自助停车</h1>
+									<h1>Parking Choosing<br />
+										车位选择</h1>
 									<p>Come Parking提供在线选车位，在线引导泊车，在线支付费用服务，让您的爱车不再无处安放!</p>
 								</header>
-                                <div id="mapG" style="z-index:999;height:500px;weight:500px">
 
-                                </div>
-                                <br>
-                                <!--<a href="#" class="image main"><img src="../images/bg.jpg" alt="" /></a>-->
-                                <ul class="actions special">
-                                    <li><a class="button large" onclick="searchParking();">周边停车场一键搜寻</a></li>
-                                    <li><a href="parking.php#register" class="button large">新用户立减20元</a></li>
+
+                                <h3>您的车牌号是：<?php echo $_SESSION["carLicnese"];?></h3>
+                                <h3>已为您自动匹配最近停车场：停车场(建材城富力桃园A区南)</h3>
+                                <h2>车位显示</h2>
+                                <ul class="actions">
+                                    <h4>A区：</h4>
+                                    <li><a class="button primary">已占occupied</a></li>
+                                    <li><a class="button primary">已占occupied</a></li>
+                                    <li><a class="vacancy button">空闲 vacancy</a></li>
+                                    <li><a class="button primary">已占occupied</a></li>
+                                </ul>
+                                <ul class="actions">
+                                    <h4>B区：</h4>
+                                    <li><a class="button primary">已占occupied</a></li>
+                                    <li><a class="button primary">已占occupied</a></li>
+                                    <li><a class="vacancy button">空闲 vacancy</a></li>
+                                    <li><a class="vacancy button">空闲 vacancy</a></li>
+                                </ul>
+                                <ul class="actions">
+                                    <h4>C区：</h4>
+                                    <li><a class="button primary">已占occupied</a></li>
+                                    <li><a class="vacancy button">空闲 vacancy</a></li>
+                                    <li><a class="vacancy button">空闲 vacancy</a></li>
+                                    <li><a class="vacancy button">空闲 vacancy</a></li>
+                                </ul>
+                                <ul class="actions">
+                                    <h4>D区：</h4>
+                                    <li><a class="button primary">已占occupied</a></li>
+                                    <li><a class="vacancy button">空闲 vacancy</a></li>
+                                    <li><a class="vacancy button">空闲 vacancy</a></li>
+                                    <li><a class="vacancy button">空闲 vacancy</a></li>
+                                </ul>
+                                <ul class="actions">
+                                    <h4>E区：</h4>
+                                    <li><a class="button primary">已占occupied</a></li>
+                                    <li><a class="vacancy button">空闲 vacancy</a></li>
+                                    <li><a class="vacancy button">空闲 vacancy</a></li>
+                                    <li><a class="vacancy button">空闲 vacancy</a></li>
+                                </ul>
+                                <ul class="actions">
+                                    <h4>F区：</h4>
+                                    <li><a class="vacancy button">空闲 vacant</a></li>
+                                    <li><a class="vacancy button">空闲 vacant</a></li>
+                                    <li><a class="button primary">已占occupied</a></li>
+                                    <li><a class="vacancy button">空闲 vacant</a></li>
                                 </ul>
 
+
+
+                                <ul class="actions special">
+                                    <li><a class="button large" onclick="searchParking();">自动锁定最近车位</a></li>
+
+                                </ul>
+                                <!--<a href="#" class="image main"><img src="../images/bg.jpg" alt="" /></a>-->
 
 							</section>
 
 					</div>
-
-				<!-- Footer -->
-					<footer id="footer">
-						<section>
-							<form method="post" action="parkingRegister.php">
-								<div class="fields">
-                                    <a name="register"><h2>Register成为会员</h2></a>
-									<div class="field">
-										<label for="cardNumber">卡号Card Number</label>
-										<input type="text" name="cardNumber" id="cardNumber" placeholder="请输入16位数字：" />
-									</div>
-									<div class="field">
-										<label for="text">绑定车牌号License Number</label>
-										<input type="text" name="carLicense" id="carNumebr" placeholder="示例：沪B1234567" />
-									</div>
-									<div class="field">
-										<label for="password">支付密码password  <a onclick="alert('小额免密协议');">开启小额免密支付</a></label>
-
-                                        <input type="password" name="password" id="password" />
-									</div>
-								</div>
-								<ul class="actions">
-									<li><input type="submit" value="开通包月服务" /></li>
-
-								</ul>
-							</form>
-						</section>
-						<section class="split contact">
-							<section class="alt">
-								<h3>Address</h3>
-								<p>1234 Somewhere Road #87257<br />
-								Nashville, TN 00000-0000</p>
-							</section>
-							<section>
-								<h3>Phone</h3>
-								<p><a href="#">(000) 000-0000</a></p>
-							</section>
-							<section>
-								<h3>Email</h3>
-								<p><a href="#">info@untitled.tld</a></p>
-							</section>
-							<section>
-								<h3>Social</h3>
-								<ul class="icons alt">
-									<li><a href="#" class="icon alt fa-twitter"><span class="label">Twitter</span></a></li>
-									<li><a href="#" class="icon alt fa-facebook"><span class="label">Facebook</span></a></li>
-									<li><a href="#" class="icon alt fa-instagram"><span class="label">Instagram</span></a></li>
-									<li><a href="#" class="icon alt fa-github"><span class="label">GitHub</span></a></li>
-								</ul>
-							</section>
-						</section>
-					</footer>
 
 				<!-- Copyright -->
 					<div id="copyright">
@@ -176,6 +170,19 @@
 			<script src="../assets/js/main.js"></script>
             <script src="../assets/js/map.js"></script>
              <script src="../assets/js/loginPop.js"></script>
+    <script>
+        $(".vacancy").click(
+            function(){
+                alert("预定成功！");
+                var txt = "<li><a class='button primary'>已占occupied</a></li>";
+                $(this).after(txt);
+                $(this).hide();
+            }
+        );
+
+
+
+    </script>
 
 
 	</body>

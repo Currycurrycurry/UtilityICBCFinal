@@ -7,7 +7,7 @@
  */
 
 session_start();
-echo $_SESSION['userName'];
+//echo $_SESSION['userName'];
 if(!isset($_SESSION['userName'])){
     showUnloged();
 }else{
