@@ -107,3 +107,12 @@ $(document).ready(function(){
         autoCenter($dialog);
     };
 });
+
+// function logout(){
+//     submit();
+//
+// }
+
+
+
+

@@ -7,6 +7,7 @@
  */
 
 session_start();
+echo $_SESSION['userName'];
 if(!isset($_SESSION['userName'])){
     showUnloged();
 }else{
@@ -30,7 +31,7 @@ function showLoged(){
     <ul class="icons">
 							<li><a href="#" class="icon fa-user"><span class="label">Login</span></a>'.$_SESSION['userName'].'</li>
 							<li><a href="#" class="icon fa-money" id="recharge"><span class="label">Recharge</span></a>充值</li>
-							<li><a href="logout.php" class="icon fa-sign-out"><span class="label">Logout</span></a>登出</li>
+							<li><a class="icon fa-sign-out" href="logout.php" ><span class="label">Logout</span></a>登出</li>
 							<li><a href="#" class="icon fa-user-circle" id="balance"><span class="label">Balance</span></a>账户余额：';
     include_once("BalanceQuery.php");
     echo ' 元</li>

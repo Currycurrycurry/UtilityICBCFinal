@@ -8,7 +8,7 @@ geolocation.getCurrentPosition(function(r){
         var mk = new BMap.Marker(r.point);
         map.addOverlay(mk);
         map.panTo(r.point);
-        alert('您的位置：'+r.point.lng+','+r.point.lat);
+        //alert('您的位置：'+r.point.lng+','+r.point.lat);
     }
     else {
         alert('failed'+this.getStatus());
@@ -20,7 +20,7 @@ function searchAround() {
     var local = new BMap.LocalSearch(map, {
         renderOptions: {map: map}
     });
-    local.search("便利店");
+    local.search("全家");
 }
 
 

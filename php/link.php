@@ -9,7 +9,7 @@ date_default_timezone_set('PRC');
     $link = mysqli_connect(
         'localhost',
         'root',
-        '',
+        'root',
         'utilities');
 if (!$link) {
     printf("Can't connect to MySQL Server. Errorcode: %s ", mysqli_connect_error());
