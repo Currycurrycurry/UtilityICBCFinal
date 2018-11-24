@@ -64,7 +64,7 @@
         </div>
 
 
-        <div class="webgl-content" style="position:absolute;top:300px;left:540px;z-index:99999;">
+        <div class="webgl-content" style="position:absolute;top:300px;left:50%;z-index:99999;">
             <div id="gameContainer" style="width: 600px; height: 400px"></div>
             <div class="footer">
                 <div class="title">新品3D展示</div>

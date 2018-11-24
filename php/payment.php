@@ -26,6 +26,8 @@
 						</ul>
 						<?php include "createNav.php" ?>
 					</nav>
+
+
                 <!--登陆-->
                 <div id="loginPart">
                     <div class="overCurtain"></div>
@@ -87,8 +89,6 @@
 								</header>
 
 								<!-- Text stuff -->
-
-
 								<p>
 									Payments加入群支付功能，与生物识别技术一起，让您在便捷支付的同时体验生活的温暖!现在开启自助生活缴费，与工行卡绑定，更享8.8折优惠！
 								</p>
@@ -100,7 +100,7 @@
 
 									<h3>水电煤缴费</h3>
 									<ul class="actions">
-										<li><a href="#" class="button primary">水费</a></li>
+										<li><a href="" class="button primary">水费</a></li>
 										<li><a href="#" class="button">电费</a></li>
                                         <li><a href="#" class="button primary">煤气费</a></li>
 									</ul>
@@ -160,7 +160,7 @@
 
                                 <!-- Copyright -->
                                 <div id="copyright">
-                                    <ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+                                    <ul><li>&copy; Utility for ICBC</li><li>Design: <a href="#">FDU team</a></li></ul>
                                 </div>
 
 			</div>

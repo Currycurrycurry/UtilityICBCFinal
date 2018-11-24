@@ -108,8 +108,11 @@
 										<input type="text" name="cardNumber" id="cardNumber" placeholder="请输入16位数字：" />
 									</div>
 									<div class="field">
-										<label for="text">绑定车牌号License Number</label>
-										<input type="text" name="carLicense" id="carNumebr" placeholder="示例：沪B1234567" />
+										<label for="text">车牌识别License Number</label>
+
+                                            <input type="file" name="file_upload" onchange="uploadImg(this);"/>
+                                            <a id="buttonForLicense" class="button small">点击进行识别</a>
+                                            <input type="text" id="carNumebr" placeholder="示例：沪B1234567" name="carLicense"/>
 									</div>
 									<div class="field">
 										<label for="password">支付密码password  <a href="xiaoemianmi.php">开启小额免密支付</a></label>
@@ -165,6 +168,47 @@
 			<script src="../assets/js/main.js"></script>
             <script src="../assets/js/map.js"></script>
             <script src="../assets/js/loginPop.js"></script>
+            <script>
+                function uploadImg(obj){
+                    var img = document.getElementById("img");
+                    var file = obj.files[0];
+                    console.log(obj);
+                    console.log(file);
+                    console.log("file.size="+file.size);
+
+                    var reader = new FileReader();
+
+                    //读取文件的过程
+                    reader.onloadstart = function (e) {
+                        console.log("start");
+                    };
+                    reader.onprogress = function(e){
+                        console.log("ing")
+                    };
+                    reader.onabort = function(e){
+                        console.log("abort");
+                    };
+                    reader.onerror = function(e){
+                        console.log("exception");
+                    };
+                    reader.onload = function (ev) {
+                        console.log("success");
+                        img.src = this.result;
+                    };
+                    reader.readAsDataURL(file);
+                }
+
+                $("#buttonForLicense").click(function(){
+                    $("#carNumebr").attr("value","京A12313");
+                    // var newTxt = '<input type="text" id="carNumebr" placeholder="示例：沪B1234567" name="carLicense"/>';
+
+                    //var txt = "   <p>识别结果：京A12313</p>";
+                   $(this).after(newTxt);
+
+
+                });
+
+            </script>
 
 
 

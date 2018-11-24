@@ -26,25 +26,15 @@ $dateN = date("Ymd").PHP_EOL;
 $timeN = date("His").PHP_EOL;
 $_SESSION['userID']=110110198801031115;
 $_SESSION["cardnumber"]=6212880200000010294;
-//$APP_ID = "IICAMP0000000973";
-//$MY_PRIVATE_KEY = "MIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCWiYPjvU51uGACHzoDpqpNKe/YKDQFzFqd1gtPeOxqfrrUzGkmnCLDYRSNy805AAh7Y/OG6yNJUZYj2FGr/m6DhRF/IMigpgdKTC35bTPNxCsWQ4cVw5r6u1ANnVw+O0DYjmm7MPaTvHqvStGMWrfjIYT5+YEfGoEDXp3hH+JohRJmi9fe6tFXdD0WkEDuobDuve6bdA26PA99/tZFLEMTXBfZrVSDnMjFcPdH0zkPmzN39Sxdy3m80MuDhck3Dx+GMn7t4zLLvEBlPzubZEhug7BCM1+ZVyPoIja97pVAtkCcYNo5DyP56xQYbNrZ6Dbi2hizZsLypTRItoM+sCbLAgMBAAECggEAQFoo94JFuC1JXZ7bvhPRWYtD7LPDCXeChVarHx4icqQaWj3H9alpcvxdPQCSintpJNZllJeQTheCh3BB+bSaqb6I7D+nhIV1OF24iZgVPTFO+gWECdnEtsq8PhW3CSNrZSf8KvmTbzRzfdwOGGHvmjkKD5KJkDJUVIxuEX7/2o3gVVTTl336OCzHD9wHyYU1oLIMtPVBA8VkNyy2h98OszCgTOl6UDWgRINXRFK43rMcN7Uu6wRcg7TAGtrOs60pikpLfMSI3lRIPOHbxH65K/cQJdTAfT/Rh+ONMAX3jh8ECq+0Wt7+Iz34XeBFOLjLPWLuopQd+rAh9lyuQ1mIgQKBgQDQ6cLGinCcEx55FBLuti8ECWsYme5ZCY/4YxJtPUzqrXvJe2Y7l9J5Fn/IVsZ+t2cI5q4lhvpbMrl7fkwwHDhDO6ow2n6pvZyerJnbqpZFg1ido+chbU9KClI6QuFdNak4WKxFH3xE2RHcNcEB4a8XEmnqn2+pgfyIhNNH6Yv4RQKBgQC4d3mZL3lQslx/eL0kQyXtUSaPePOYZAD18tsIftR3X02iKiPxW6KvpUKCpTnIqMxDUrCrm23HebRx8WNTFn2z3wnu+tSe9ZZvH+suLIFsO5PJ+/f5AAVgcr76/GlnOqccDy9BOrskHYV8DbjUyzYEkGsZacLA/6luvVIoLgi7zwKBgFYReGVDc9FZLxzC4GnoNMZ8+tpP0JpuDhpO9rB6qM2mW3FOnXe/vL6WPl7TIUPjW1eXcfeT/GDGLRRrnAfWGHfahOtLmRNlQrk8csbFKNPKoR+Q/xAOcLQYPHg0RZSZHvZP0elIZ3IV2/3VR4b266OdunUm6mHzY4766fCej0PhAoGAftsCz3qbVghinfLdN6vJ0EsHVpEaDAlxs7HAOTZnTHRIwiVytE+NMHdYptmTRE/4sK+T+V+Y/h3PHrCe2ovUBDd08FikkXBYdLEhnY5TrqfF+ZiCrkT6bZpbheTBY5EtTJmQqK4H9k0q9+XD3uqkijz6ue5GVU08KoCdmC4YKXcCgYA6BmQ0PRoCRlhKM8dyXYDrQXKbIJj6shP/aSu/9I91CWicoqO0639Jea88a1axsesSw8R01HVpVQdD9g+cDip9MwXD+8vzrp5O3SLctMcJfJwYG/q1z3c13MvNPr4GCfpF3F/G4Lo1qLk+lOWonbhwHwaDASKMvEA3qaZciEvJHQ==";
+// $APP_ID = "IICAMP0000000973";
+// $MY_PRIVATE_KEY = "MIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCWiYPjvU51uGACHzoDpqpNKe/YKDQFzFqd1gtPeOxqfrrUzGkmnCLDYRSNy805AAh7Y/OG6yNJUZYj2FGr/m6DhRF/IMigpgdKTC35bTPNxCsWQ4cVw5r6u1ANnVw+O0DYjmm7MPaTvHqvStGMWrfjIYT5+YEfGoEDXp3hH+JohRJmi9fe6tFXdD0WkEDuobDuve6bdA26PA99/tZFLEMTXBfZrVSDnMjFcPdH0zkPmzN39Sxdy3m80MuDhck3Dx+GMn7t4zLLvEBlPzubZEhug7BCM1+ZVyPoIja97pVAtkCcYNo5DyP56xQYbNrZ6Dbi2hizZsLypTRItoM+sCbLAgMBAAECggEAQFoo94JFuC1JXZ7bvhPRWYtD7LPDCXeChVarHx4icqQaWj3H9alpcvxdPQCSintpJNZllJeQTheCh3BB+bSaqb6I7D+nhIV1OF24iZgVPTFO+gWECdnEtsq8PhW3CSNrZSf8KvmTbzRzfdwOGGHvmjkKD5KJkDJUVIxuEX7/2o3gVVTTl336OCzHD9wHyYU1oLIMtPVBA8VkNyy2h98OszCgTOl6UDWgRINXRFK43rMcN7Uu6wRcg7TAGtrOs60pikpLfMSI3lRIPOHbxH65K/cQJdTAfT/Rh+ONMAX3jh8ECq+0Wt7+Iz34XeBFOLjLPWLuopQd+rAh9lyuQ1mIgQKBgQDQ6cLGinCcEx55FBLuti8ECWsYme5ZCY/4YxJtPUzqrXvJe2Y7l9J5Fn/IVsZ+t2cI5q4lhvpbMrl7fkwwHDhDO6ow2n6pvZyerJnbqpZFg1ido+chbU9KClI6QuFdNak4WKxFH3xE2RHcNcEB4a8XEmnqn2+pgfyIhNNH6Yv4RQKBgQC4d3mZL3lQslx/eL0kQyXtUSaPePOYZAD18tsIftR3X02iKiPxW6KvpUKCpTnIqMxDUrCrm23HebRx8WNTFn2z3wnu+tSe9ZZvH+suLIFsO5PJ+/f5AAVgcr76/GlnOqccDy9BOrskHYV8DbjUyzYEkGsZacLA/6luvVIoLgi7zwKBgFYReGVDc9FZLxzC4GnoNMZ8+tpP0JpuDhpO9rB6qM2mW3FOnXe/vL6WPl7TIUPjW1eXcfeT/GDGLRRrnAfWGHfahOtLmRNlQrk8csbFKNPKoR+Q/xAOcLQYPHg0RZSZHvZP0elIZ3IV2/3VR4b266OdunUm6mHzY4766fCej0PhAoGAftsCz3qbVghinfLdN6vJ0EsHVpEaDAlxs7HAOTZnTHRIwiVytE+NMHdYptmTRE/4sK+T+V+Y/h3PHrCe2ovUBDd08FikkXBYdLEhnY5TrqfF+ZiCrkT6bZpbheTBY5EtTJmQqK4H9k0q9+XD3uqkijz6ue5GVU08KoCdmC4YKXcCgYA6BmQ0PRoCRlhKM8dyXYDrQXKbIJj6shP/aSu/9I91CWicoqO0639Jea88a1axsesSw8R01HVpVQdD9g+cDip9MwXD+8vzrp5O3SLctMcJfJwYG/q1z3c13MvNPr4GCfpF3F/G4Lo1qLk+lOWonbhwHwaDASKMvEA3qaZciEvJHQ==";
 $APIGW_PUBLIC_KEY = "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCwFgHD4kzEVPdOj03ctKM7KV+16bWZ5BMNgvEeuEQwfQYkRVwI9HFOGkwNTMn5hiJXHnlXYCX+zp5r6R52MY0O7BsTCLT7aHaxsANsvI9ABGx3OaTVlPB59M6GPbJh0uXvio0m1r/lTW3Z60RU6Q3oid/rNhP3CiNgg0W6O3AGqwIDAQAB";
 $request = array(
-    "serviceUrl" => 'https://apisandbox.dccnet.com.cn/api/bas/face/personcheck/V1',
+    "serviceUrl" => 'https://apisandbox.dccnet.com.cn/api/imagerecognition/object/plate/V1',
     "method" => 'POST',
     "isNeedEncrypt" => false,
     "biz_content" => array(
-        "id"=>"qwe",
-        "img1"=>"233",
-
-        "baseFlage"=>"1",
-        "channel"=>"TEST",
-        "trCode"=>"qwe",
-        "appName"=>"FTEST",
-        "appInfo"=>"2333",
-        "retentionTime"=>"2099-01-01 00:00;00",
-        "postmethod"=>'0',
-
+        "fileName"=>"1.jpg"
     )
 
 );
@@ -63,5 +53,5 @@ $resp = $client->execute($request,'msgId','');//执行调用;msgId消息通讯�
 //var_dump($resp);
 //echo $resp;
 $respObj = json_decode($resp,true);
-
+echo $respObj["response_biz_content"]["plate_str"];
 ?>
