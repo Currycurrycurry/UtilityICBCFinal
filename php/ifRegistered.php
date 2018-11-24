@@ -7,7 +7,7 @@
  */
 
 session_start();
-echo $_SESSION['userName'];
+//echo $_SESSION['userName'];
 if(!isset($_SESSION['userName'])){
     showUnregister();
 }
@@ -21,7 +21,7 @@ function showUnregister(){
                     <div class="fields">
                         <div class="field">
                             <label for="name">用户名Name</label>
-                            <input type="text" placeholder="示例：王小明123" style="width: 250px" name="name" id="name" onblur="EmptyUsernameHint();WrongUsernameFormHint();" />
+                            <input type="text" style="width: 250px" name="name" id="name" placeholder="必须包含包含6位以上的字符！" onblur="EmptyUsernameHint();WrongUsernameFormHint();" />
                             <p class="hide" style="color: red;" id="promptEN">用户名不能为空！</p>
                             <p class="hide" style="color: red;" id="promptWrongUser">用户名格式错误！</p>
                         </div>

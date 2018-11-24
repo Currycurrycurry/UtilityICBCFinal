@@ -10,16 +10,16 @@
 	</head>
 	<body class="is-preload">
 
-		<!-- Wrapper -->
+		    <!-- Wrapper -->
 			<div id="wrapper">
 
 				<!-- Header -->
-					<header id="header">
+                <header id="header">
 						<a href="index.php" class="logo">Utilities</a>
 					</header>
 
 				<!-- Nav -->
-					<nav id="nav">
+                <nav id="nav">
 						<ul class="links">
 							<li><a href="index.php">Goods跑腿代购</a></li>
 							<li class="active"><a href="parking.php">Come Parking自助停车</a></li>
@@ -27,6 +27,7 @@
 						</ul>
 						<?php include "createNav.php" ?>
 					</nav>
+
                 <!--登陆-->
                 <div id="loginPart">
                     <div class="overCurtain"></div>
@@ -51,14 +52,10 @@
                     </div>
                 </div>
 
-
-
-
-                <!--                充值弹窗-->
-                <!--                width:100%;height:600px;-->
-                <div id="rechargePart" style="">
+                <!--充值弹窗-->
+                <div id="rechargePart" style="z-index: 99999;">
                     <div class="RoverCurtain"></div>
-                    <div class="Rhide-center" style="border: solid;border-width: thick;">
+                    <div class="Rhide-center">
                         <form id="Rformhead" method="post" action = 'PayForParking.php'>
                             <button type="button" id="Rclose">X</button>
                             <p id="reCharge" style="margin: 0 auto;display: inline;">充值Recharge</p><br/>
@@ -75,14 +72,8 @@
                     </div>
                 </div>
 
-
-
-
-
-
                 <!-- Main -->
-					<div id="main">
-
+                <div id="main">
 						<!-- Post -->
 							<section class="post">
 								<header class="major">
@@ -97,7 +88,6 @@
 
                                 </div>
                                 <br>
-                                <!--<a href="#" class="image main"><img src="../images/bg.jpg" alt="" /></a>-->
                                 <ul class="actions special">
                                     <li><a class="button large" onclick="searchParking();">周边停车场一键搜寻</a></li>
                                     <li><a href="parking.php#register" class="button large">新用户立减20元</a></li>
@@ -105,11 +95,10 @@
 
 
 							</section>
-
 					</div>
 
 				<!-- Footer -->
-					<footer id="footer">
+                <footer id="footer">
 						<section>
 							<form method="post" action="parkingRegister.php">
 								<div class="fields">
@@ -123,7 +112,7 @@
 										<input type="text" name="carLicense" id="carNumebr" placeholder="示例：沪B1234567" />
 									</div>
 									<div class="field">
-										<label for="password">支付密码password  <a onclick="alert('小额免密协议');">开启小额免密支付</a></label>
+										<label for="password">支付密码password  <a href="xiaoemianmi.php">开启小额免密支付</a></label>
 
                                         <input type="password" name="password" id="password" />
 									</div>
@@ -160,10 +149,10 @@
 						</section>
 					</footer>
 
-				<!-- Copyright -->
-					<div id="copyright">
-						<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
-					</div>
+                <!-- Copyright -->
+                <div id="copyright">
+                    <ul><li>&copy; Utility for ICBC</li><li>Design: <a href="#">FDU team</a></li></ul>
+                </div>
 
 			</div>
 
@@ -175,7 +164,8 @@
 			<script src="../assets/js/util.js"></script>
 			<script src="../assets/js/main.js"></script>
             <script src="../assets/js/map.js"></script>
-             <script src="../assets/js/loginPop.js"></script>
+            <script src="../assets/js/loginPop.js"></script>
+
 
 
 	</body>

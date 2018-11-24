@@ -28,7 +28,6 @@
     <nav id="nav">
         <ul class="links">
             <li><a href="index.php">Return返回首页</a></li>
-<!--            <li><a href="#">85°C面包店</a></li>-->
             <li><a href="#">AJISEN RAMEN味千拉面</a></li>
             <li><a href="#">ÉPOQUE波奇四季</a></li>
             <li class="active"><a href="details.php">Family全家</a></li>
@@ -65,31 +64,6 @@
         </div>
 
 
-
-
-        <!--                充值弹窗-->
-        <!--                width:100%;height:600px;-->
-        <!--        <div id="rechargePart">-->
-        <!--            <div class="RoverCurtain"></div>-->
-        <!--            <div class="Rhide-center" style="border: solid;border-width: thick;">-->
-        <!--                <form id="Rformhead" method="post" action = 'PayForParking.php'>-->
-        <!--                    <button type="button" id="Rclose">X</button>-->
-        <!--                    <p id="reCharge" style="margin: 0 auto;display: inline;">充值Recharge</p><br/>-->
-        <!---->
-        <!--                    请输入充值金额：<input type = "text"height="30px" width="120px" name = "amount" value = '100'/>-->
-        <!--                    <br><hr>-->
-        <!--                </form>-->
-        <!--                <div id="Rformbody">-->
-                            <!--                           <img src="../images/bread.png">-->
-        <!--                    <video height="120px" autoplay="autoplay"></video><br/>-->
-        <!--                    <canvas id="canvas1" height="120px" ></canvas><hr />-->
-        <!--                    <input type="button" title="拍照" value="支付" onclick="getPhoto();alert('支付成功！');" />-->
-        <!--                </div>-->
-        <!--            </div>-->
-        <!--        </div>-->
-
-
-<!--        <span class="image fit"><img src="../images/familybg.jpg" alt="" /></span>-->
         <div class="webgl-content" style="position:absolute;top:300px;left:540px;z-index:99999;">
             <div id="gameContainer" style="width: 600px; height: 400px"></div>
             <div class="footer">
@@ -98,12 +72,6 @@
 
             </div>
         </div>
-<!--        weggl!!!!!!!!-->
-        <!-- Image -->
-<!--        <header class="major">-->
-<!--            <h1>Family<br />-->
-<!--                全家</h1>-->
-<!--        </header>-->
 
         <br>
         <br>
@@ -113,16 +81,12 @@
         <br>
         <br>
         <br>
-
 
 
         <header class="major">
-									<span class="date"><?php
-                                        echo " " . date("Y/m/d") . "<br>";
-                                        ?></span>
+            <span class="date"><?php echo " " . date("Y/m/d") . "<br>"; ?></span>
             <h1><a href="#">Family<br />
                     全家</a></h1>
-
         </header>
 
 
@@ -162,7 +126,7 @@
                 <tr>
                     <td colspan="2">商品一共<a id="goodNumber">0</a>件</span></td>
                     <td colspan="2" id="goodSum">0.00</td>
-                    <td ><button class="button small" id="checkout" value="结算">结算</button></td>
+                    <td ><a class="button small" id="checkout" value="结算" href="details.php#register">结算</a></td>
                 </tr>
                 </tfoot>
             </table>
@@ -174,10 +138,11 @@
             <!-- Footer Regsster -->
             <footer id="footer">
                 <section>
+                    <a name="register"><h2>Check out支付确认</h2></a>
                     <form method="post" action="#">
                         <div class="fields">
                             <div class="field">
-                                <label for="name" style="width: 80px">姓名Name</label>
+                                <label for="name" style="width: 100px">确认姓名Name</label>
                                 <input type="text" name="name" id="name" placeholder="王晓宁" />
                             </div>
 
@@ -233,15 +198,6 @@
 
         var tmpSum;
 
-
-        // $(document).ready(function(){
-        //     $(".total").each(function(){
-        //         tmpSum +=parseFloat(($(this).text()+"").substring(1));
-        //     });
-        //
-        //     $("#goodSum").text(tmpSum+"");
-        // });
-
         $("#cartTr").on("click",".delete",function(){
             $(this).parent().parent().remove();
 
@@ -254,8 +210,6 @@
             });
 
             $("#goodSum").text(tmpSum+"");
-
-
 
         });
 
@@ -341,16 +295,6 @@
                 });
 
                 $("#goodSum").text(tmpSum+"");
-
-            }
-        );
-
-
-        //待补充：人脸识别支付 商户收单二维码
-        $("#checkout").click(
-            function () {
-                //
-               alert("支付成功！");
 
             }
         );

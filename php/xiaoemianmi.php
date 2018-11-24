@@ -63,6 +63,6 @@ $resp = $client->execute($request,'msgId','');//执行调用;msgId消息通讯�
 //echo $resp;
 $respObj = json_decode($resp,true);
 if($respObj["return_code"] == 0){ //sucess
-    echo $respObj["account_balance"];
+    echo $respObj["account_balance"];//？？？？？？？
 }
 ?>

@@ -16,7 +16,7 @@ echo isset($_SESSION['userName']);
 else{
     //echo 1;
     //header("Location:index.php");
-    echo '<script>alert("注册失败！原因：用户名或密码错误！");</script>';
+    echo '<script>alert("注册失败！原因：用户名或密码错误！");history.go(-1);</script>';//11.24早新增加
 
     //header("Location:index.php");
 

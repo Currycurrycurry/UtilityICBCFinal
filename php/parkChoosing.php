@@ -100,46 +100,75 @@
                                 <h3>已为您自动匹配最近停车场：停车场(建材城富力桃园A区南)</h3>
                                 <h2>车位显示</h2>
                                 <ul class="actions">
+								<?php
+									$url='http://192.168.88.131:3000/api/queries/selectCommodities';
+									$places = json_decode(file_get_contents($url));
+								?>
                                     <h4>A区：</h4>
-                                    <li><a class="button primary">已占occupied</a></li>
-                                    <li><a class="button primary">已占occupied</a></li>
-                                    <li><a class="vacancy button">空闲 vacancy</a></li>
-                                    <li><a class="button primary">已占occupied</a></li>
+									<?php 
+										for($i=0;$i<4;$i++){
+											if($places[$i]->owner!="resource:org.example.mynetwork.Trader#resource:org.example.mynetwork.Trader#Lot1")
+												echo '<li><a class="button primary">已占occupied</a></li>';
+											else echo '<li><a class="vacancy button">空闲 vacancy</a></li>';
+										}
+										
+									?>
+
                                 </ul>
                                 <ul class="actions">
                                     <h4>B区：</h4>
-                                    <li><a class="button primary">已占occupied</a></li>
-                                    <li><a class="button primary">已占occupied</a></li>
-                                    <li><a class="vacancy button">空闲 vacancy</a></li>
-                                    <li><a class="vacancy button">空闲 vacancy</a></li>
+                                    <?php 
+										for($i=4;$i<8;$i++){
+											if($places[$i]->owner!="resource:org.example.mynetwork.Trader#resource:org.example.mynetwork.Trader#Lot1")
+												echo '<li><a class="button primary">已占occupied</a></li>';
+											else echo '<li><a class="vacancy button">空闲 vacancy</a></li>';
+										}
+										
+									?>
                                 </ul>
                                 <ul class="actions">
                                     <h4>C区：</h4>
-                                    <li><a class="button primary">已占occupied</a></li>
-                                    <li><a class="vacancy button">空闲 vacancy</a></li>
-                                    <li><a class="vacancy button">空闲 vacancy</a></li>
-                                    <li><a class="vacancy button">空闲 vacancy</a></li>
+                                    <?php 
+										for($i=8;$i<12;$i++){
+											if($places[$i]->owner!="resource:org.example.mynetwork.Trader#resource:org.example.mynetwork.Trader#Lot1")
+												echo '<li><a class="button primary">已占occupied</a></li>';
+											else echo '<li><a class="vacancy button">空闲 vacancy</a></li>';
+										}
+										
+									?>
                                 </ul>
                                 <ul class="actions">
                                     <h4>D区：</h4>
-                                    <li><a class="button primary">已占occupied</a></li>
-                                    <li><a class="vacancy button">空闲 vacancy</a></li>
-                                    <li><a class="vacancy button">空闲 vacancy</a></li>
-                                    <li><a class="vacancy button">空闲 vacancy</a></li>
+<?php 
+										for($i=12;$i<16;$i++){
+											if($places[$i]->owner!="resource:org.example.mynetwork.Trader#resource:org.example.mynetwork.Trader#Lot1")
+												echo '<li><a class="button primary">已占occupied</a></li>';
+											else echo '<li><a class="vacancy button">空闲 vacancy</a></li>';
+										}
+										
+									?>
                                 </ul>
                                 <ul class="actions">
                                     <h4>E区：</h4>
-                                    <li><a class="button primary">已占occupied</a></li>
-                                    <li><a class="vacancy button">空闲 vacancy</a></li>
-                                    <li><a class="vacancy button">空闲 vacancy</a></li>
-                                    <li><a class="vacancy button">空闲 vacancy</a></li>
+                                    <?php 
+										for($i=16;$i<20;$i++){
+											if($places[$i]->owner!="resource:org.example.mynetwork.Trader#resource:org.example.mynetwork.Trader#Lot1")
+												echo '<li><a class="button primary">已占occupied</a></li>';
+											else echo '<li><a class="vacancy button">空闲 vacancy</a></li>';
+										}
+										
+									?>
                                 </ul>
                                 <ul class="actions">
                                     <h4>F区：</h4>
-                                    <li><a class="vacancy button">空闲 vacant</a></li>
-                                    <li><a class="vacancy button">空闲 vacant</a></li>
-                                    <li><a class="button primary">已占occupied</a></li>
-                                    <li><a class="vacancy button">空闲 vacant</a></li>
+                                    <?php 
+										for($i=20;$i<24;$i++){
+											if($places[$i]->owner!="resource:org.example.mynetwork.Trader#resource:org.example.mynetwork.Trader#Lot1")
+												echo '<li><a class="button primary">已占occupied</a></li>';
+											else echo '<li><a class="vacancy button">空闲 vacancy</a></li>';
+										}
+										
+									?>
                                 </ul>
 
 
